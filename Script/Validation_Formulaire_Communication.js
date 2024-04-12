@@ -74,5 +74,5 @@ function validerFormulaire(event) {
     // Affiche l'alerte avec le prénom, le nom et la confirmation d'envoi
     alert("Vous etes maintenant inscrit, " + prenom + " " + nom );
     return true;
-} };
+}
 
