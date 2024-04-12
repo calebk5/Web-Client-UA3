@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Totoko's Temptations</title>
+    <link rel="stylesheet" href="../CSS/css_formulaire_c.css">
+    <script src="../Script/Validation_Formulaire_Communication.js"></script>
+</head>
+
+<body>
+    <div id="page-container">
+        <div id="content-wrap">
+            <!-- En-tête -->
+            <header>
+                <div class="haut_de_page">
+                    <div class="logo">
+                        <img src="../Images/Totokos.Temptations.Logo.Website.png" width="50px" alt="Logo">Totoko's Temptations
+                    </div>
+                    <!-- Navigation -->
+                    <nav>
+                        <ul>
+                            <li><a href="./Accueil_Boulangerie.html">Accueil</a></li>
+                            <li>
+                                <a href="./Selection_Produit.html">Sélection de produits</a>
+                                <ul class="sous-menu">
+                                    <li><a href="./Selection_Produit.html#viennoiseries">Viennoiserie</a></li>
+                                    <li><a href="./Selection_Produit.html#pains">Pains délicieux</a></li>
+                                    <li><a href="./Selection_Produit.html#gateaux">Gâteaux</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./Formulaire_Membre.html">Inscription</a></li>
+                            <li><a href="./Mission_Histoire.html">Notre mission &amp; histoire</a></li>
+                            <li><a href="./Notre_Equipe.html">Notre équipe</a></li>
+                            <li><a href="./Formulaire_Communication.html">Contactez-nous</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <!-- Contenu principal -->
+            <main>
+                <div class="content">
+                    <br>
+                    <h1>Entrez En Communication Avec Nous!</h1>
+                    <br>
+                    <p>Pour de information de surplus au sujet de notre service de livrage, d'une commande de taille mariage, ou simplement commander a distance, telephonez nous au: 819‑123‑1234.</p>
+                    <!-- Formulaire d'inscription -->
+                    <div class="formulaire">
+                        <form action="#" method="post" onsubmit="return validerFormulaire(event)">
+                            <!-- Section "Identité" -->
+                            <fieldset>
+                                <legend>Identité</legend>
+                                <div>
+                                    <label for="prenom">Prénom</label>
+                                    <input type="text" name="fname" id="prenom" placeholder="Entrez votre prénom">
+                                </div>
+                                <div>
+                                    <label for="nom">Nom</label>
+                                    <input type="text" name="lname" id="nom" placeholder="Entrez votre nom">
+                                </div>
+                                <div>
+                                    <label for="nom">Numéro de téléphone</label>
+                                    <input type="text" name="numero_de_telephone" id="numero_de_telephone" placeholder="#123-456-7890">
+                                </div>
+                                <div>
+                                    <label for="nom">Adresse Courriel</label>
+                                    <input type="text" name="adresse_courriel" id="adresse_courriel" placeholder="Jo@blo.com">
+                                </div>
+                                <br>
+                                <div>
+                                    <p>Est-ce que vous avez plus de 18 ans?</p>
+                                    <label for="oui">Oui</label>
+                                    <input type="radio" name="mineur" id="oui" value="true">
+                                    <label for="non">Non</label>
+                                    <input type="radio" name="mineur" id="non" value="false">
+                                </div>
+                            </fieldset>
+                            <br>
+                            <!-- Section "Envoi"-->
+                            <fieldset>
+                                <legend>Envoi</legend>
+                                <div>
+                                    <label class="subtitle" for="position">Message</label>
+                                </div>
+                                <input type="text" id="message" name="message" placeholder="Votre message">
+                                <br>
+                                <div>
+                                    <input type="checkbox" id="importance" name="importance" value="true">
+                                    <label for="importance"> Urgent</label>
+                                </div>
+                                <button type="submit">Soumettre</button>
+                                <br>
+                                <p>Si vous nous contactez en raison d'application pour un poste dans la famille de Totoko's Temptations, cliquez <a href="./Formulaire_Membre.html">Ici.</a></p>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </main>
+            <!-- Pied de page -->
+            <footer>
+                <div class="bas_de_page">
+                    <nav>
+                        <ul>
+                            <li><a href="https://github.com/calebk5/Web-Client">Visitez notre répertoire GitHub en cliquant ici</a></li>
+                            <li>Téléphonez-nous au : <a href="tel:819-123-1234">819&#8209;123&#8209;1234</a></li>
+                            <li><a href="./Accueil_Boulangerie.html">Accueil</a></li>
+                            <li><a href="./Selection_Produit.html">Sélection de produits</a></li>
+                            <li><a href="./Formulaire_Membre.html">Inscription</a></li>
+                            <li><a href="./Mission_Histoire.html">Notre mission &amp; histoire</a></li>
+                            <li><a href="./Notre_Equipe.html">Notre équipe</a></li>
+                            <li><a href="./Formulaire_Communication.html">Contactez-nous</a></li>
+                            <li>Date de création : 9 mars 2024</li>
+                            <li>©Totoko &amp; Family</li>
+                        </ul>
+                    </nav>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

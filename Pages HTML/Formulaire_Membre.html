@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Totoko's Temptations</title>
+    <link rel="stylesheet" href="../CSS/css_formulaire_m.css"> <!-- Lien vers la feuille de style CSS -->
+    <script src="../Script/Validation_Formulaire_Membre.js"></script>
+</head>
+
+<body>
+    <div id="page-container">
+        <div id="content-wrap">
+            <!-- En-tête -->
+            <header>
+                <div class="haut_de_page">
+                    <div class="logo">
+                        <img src="../Images/Totokos.Temptations.Logo.Website.png" width="50px" alt="Logo">Totoko's Temptations</div>
+                    <!-- Navigation -->
+                    <nav>
+                        <ul>
+                            <!-- Liens de navigation -->
+                            <li><a href="./Accueil_Boulangerie.html">Accueil</a></li>
+                            <li><a href="./Selection_Produit.html">Sélection de produits</a>
+                                <!-- Sous-menu de sélection de produits -->
+                                <ul class="sous-menu">
+                                    <li><a href="./Selection_Produit.html#viennoiseries">Viennoiserie</a></li>
+                                    <li><a href="./Selection_Produit.html#pains">Pains délicieux</a></li>
+                                    <li><a href="./Selection_Produit.html#gateaux">Gâteaux</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="./Formulaire_Membre.html">Inscription</a></li>
+                            <li><a href="./Mission_Histoire.html">Notre mission &amp; histoire</a></li>
+                            <li><a href="./Notre_Equipe.html">Notre équipe</a></li>
+                            <li><a href="./Formulaire_Communication.html">Contactez-nous</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <!-- Contenu principal -->
+            <main>
+                <div class="content">
+                    <br>
+                    <h1>Inscription</h1>
+                    <!-- Formulaire d'inscription -->
+                    <div class="formulaire">
+                        <form action="#" method="post" onsubmit="return validerFormulaire(event)">
+                            <!-- Section "Identité" -->
+                            <fieldset>
+                                <legend>Identité</legend>
+                                <div>
+                                    <label for="prenom">Prénom</label>
+                                    <div>
+                                        <input type="text" name="fname" id="prenom" placeholder="Entrez votre prénom">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="nom">Nom</label>
+                                    <div>
+                                        <input type="text" name="lname" id="nom" placeholder="Entrez votre nom">
+                                    </div>
+                                </div>
+                                <div>
+                                    <p>Est-ce que vous avez plus de 18 ans?</p>
+                                    <label for="oui">Oui</label>
+                                    <input type="radio" name="mineur" id="oui" value="true">
+                                    <label for="non">Non</label>
+                                    <input type="radio" name="mineur" id="non" value="false">
+                                </div>
+                            </fieldset>
+                            <br>
+                            <!-- Section "Compétences" -->
+                            <fieldset>
+                                <legend>Compétences</legend>
+                                <div>
+                                    <label class="subtitle" for="education">Éducation</label>
+                                </div>
+                                <br>
+                                <div>
+                                    <input type="radio" name="education" id="secondaire" value="SECONDAIRE">
+                                    <label for="secondaire">Secondaire</label>
+                                    <input type="radio" name="education" id="collegiale" value="COLLEGIALE">
+                                    <label for="collegiale">Collégiale</label>
+                                    <input type="radio" name="education" id="universitaire" value="UNIVERSITAIRE">
+                                    <label for="universitaire">Universitaire</label>
+                                </div>
+                                <br>
+                                <div>
+                                    <label class="subtitle" for="experience">Expérience</label>
+                                </div>
+                                <br>
+                                <div>
+                                    <label for="typeofexp">Titre de l'expérience:</label>
+                                    <div>
+                                        <input class="textzone" type="text" name="typeofexp" id="typeofexp" placeholder="Entrez le titre de l'expérience">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="ville">Ville</label>
+                                    <input type="text" name="ville" id="ville" placeholder="Entrez votre ville">
+                                </div>
+                                <label for="start_exp">Début de l'expérience</label>
+                                <br>
+                                <input class="date" type="date" id="start_exp" name="startofexp">
+                                <br>
+                                <label for="end_exp">Fin de l'expérience</label>
+                                <br>
+                                <input class="date" type="date" id="end_exp" name="endofexp">
+                                <div>
+                                    <p>Avons-nous l'autorisation de contacter vos références?</p>
+                                    <label for="oui_aut">Oui</label>
+                                    <input type="radio" name="reference" id="oui_aut" value="true">
+                                    <label for="non_aut">Non</label>
+                                    <input type="radio" name="reference" id="non_aut" value="false">
+                                </div>
+                            </fieldset>
+                            <button type="submit">Soumettre</button>
+                        </form>
+                    </div>
+                </div>
+            </main>
+            <!-- Pied de page -->
+            <footer>
+                <div class="bas_de_page">
+                    <nav>
+                        <ul>
+                            <!-- Liens de navigation du pied de page -->
+                            <li><a href="https://github.com/calebk5/Web-Client">Visitez notre répertoire GitHub en cliquant ici</a></li>
+                            <li>Téléphonez-nous au : <a href="tel:819-123-1234">819&#8209;123&#8209;1234</a></li>
+                            <li><a href="./Accueil_Boulangerie.html">Accueil</a></li>
+                            <li><a href="./Selection_Produit.html">Sélection de produits</a></li>
+                            <li><a href="./Formulaire_Membre.html">Inscription</a></li>
+                            <li><a href="./Mission_Histoire.html">Notre mission &amp; histoire</a></li>
+                            <li><a href="./Notre_Equipe.html">Notre équipe</a></li>
+                            <li><a href="./Formulaire_Communication.html">Contactez-nous</a></li>
+                            <li>Date de création : 9 mars 2024</li>
+                            <li>©Totoko &amp; Family</li>
+                        </ul>
+                    </nav>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

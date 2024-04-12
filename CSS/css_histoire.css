@@ -1,0 +1,241 @@
+/* Importation des polices Google */
+@import url('https://fonts.googleapis.com/css2?family=Cookie:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Réinitialisation des styles par défaut */
+html, body {
+    font-size: 14px;
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/* Styles de l'en-tête */
+header {
+    background-color: rgb(255, 255, 255);
+    outline: 1px solid rgb(43, 23, 0); /* Ajout d'une bordure solide */
+}
+
+/* Navigation en haut de la page */
+.haut_de_page {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.haut_de_page li {
+    list-style: none;
+    margin-right: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+}
+
+.haut_de_page nav {
+    text-align: right;
+}
+
+.haut_de_page a {
+    text-decoration: none;
+    color: rgb(208, 155, 30);
+    text-transform: uppercase;
+}
+
+.haut_de_page a:hover,
+.haut_de_page a:active {
+    color: rgb(43, 23, 0);
+}
+
+.haut_de_page li:last-of-type {
+    margin-right: 50px;
+}
+
+/* Styles du logo */
+.logo {
+    font-family: Cookie;
+    padding-left: 30px;
+    font-size: 27px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: rgb(43, 23, 0);
+    text-shadow: 2px 2px 2px rgb(203, 181, 127);
+}
+
+.logo img {
+    padding: 10px 20px;
+    vertical-align: middle;
+}
+
+.logo,
+nav,
+.haut_de_page li,
+.logo img {
+    display: inline-block;
+}
+
+/* Styles du sous-menu */
+.sous-menu {
+    display: none; /* Cacher le sous-menu par défaut */
+    position: absolute; /* Position par rapport au parent */
+    top: 15px; /* Ajuster si nécessaire */
+    background-color: rgb(249, 243, 236);
+    border-radius: 5%;
+    padding-top: 5px;
+    text-align: left;
+    z-index: 50; /* Éviter les chevauchements */
+}
+
+.haut_de_page li:hover .sous-menu {
+    display: block;
+}
+
+.sous-menu li {
+    margin: 7px;
+}
+
+/* Conteneur de la page et enveloppe du contenu */
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 50px;
+}
+
+/* Styles du pied de page */
+footer {
+    background-color: rgb(26, 17, 0);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+}
+
+.bas_de_page li {
+    list-style: none;
+    margin-right: 15px;
+    font-size: 14px;
+    color: rgb(231, 225, 212);
+}
+
+.bas_de_page nav {
+    text-align: right;
+}
+
+.bas_de_page a {
+    text-decoration: none;
+    color: rgb(231, 225, 212);
+    font-size: 14px;
+}
+
+.bas_de_page a:hover {
+    color: rgb(208, 155, 30);
+}
+
+.bas_de_page li:last-of-type {
+    margin-right: 50px;
+}
+
+.bas_de_page nav,
+.bas_de_page li {
+    display: inline-block;
+}
+
+/* Contenu de la page  */
+
+/* Haut de la page avec titre et background image */
+.titre {
+    height: 400px;
+    font-size: 50px;
+    text-align: center;
+    
+    
+}
+
+.titre h1{
+    font-family: Cookie;
+    color: rgb(26, 17, 0);
+    background-color: rgba(241, 230, 195, 0.797);
+    border-radius: 5%;
+    padding: 5px;
+    position: absolute;
+    top: 30%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center;
+}
+
+.titre div {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.titre img {
+    width: 100%;
+    height:400px;
+    object-fit: cover;
+}
+
+/* Textes et images de l'histoire */
+
+.histoire div {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100px; 
+    margin: 0; 
+}
+
+.histoire h2{
+    text-align: center;
+    font-size: 45px;
+    font-family: Cookie;
+    color: rgb(26, 17, 0);
+    background-color: rgba(241, 230, 195, 0.797);
+    border-radius: 5%;
+    display: inline-block; 
+    padding: 10px 20px; 
+}
+
+.wrapper{
+    margin-left: 50%;
+    margin-right: 15%;
+    height: 300px;
+    position: relative;
+}
+.wrapper p{
+    padding: 2% ;
+    font-size: 16px;
+    background-color: rgba(241, 230, 195, 0.633);
+    color: rgb(26, 17, 0);
+    border-radius: 5%;
+
+}
+.wrapper img{
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-200%,-65%);
+}
+
+/* Section mession */
+.mission{
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.mission p {
+padding: 2% ;
+font-size: 16px;
+background-color: rgba(241, 230, 195, 0.633);
+color: rgb(26, 17, 0);
+border-radius: 5%;
+}

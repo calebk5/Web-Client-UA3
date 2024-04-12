@@ -1,0 +1,269 @@
+/* Importation des polices Google */
+@import url('https://fonts.googleapis.com/css2?family=Cookie:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Réinitialisation des styles par défaut */
+html, body {
+    font-size: 14px;
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/* Styles de l'en-tête */
+header {
+    background-color: rgb(255, 255, 255);
+    outline: 1px solid rgb(43, 23, 0); /* Ajout d'une bordure solide */
+}
+
+/* Navigation en haut de la page */
+.haut_de_page {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.haut_de_page li {
+    list-style: none;
+    margin-right: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+}
+
+.haut_de_page nav {
+    text-align: right;
+}
+
+.haut_de_page a {
+    text-decoration: none;
+    color: rgb(208, 155, 30);
+    text-transform: uppercase;
+}
+
+.haut_de_page a:hover,
+.haut_de_page a:active {
+    color: rgb(43, 23, 0);
+}
+
+.haut_de_page li:last-of-type {
+    margin-right: 50px;
+}
+
+/* Styles du logo */
+.logo {
+    font-family: Cookie;
+    padding-left: 30px;
+    font-size: 27px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: rgb(43, 23, 0);
+    text-shadow: 2px 2px 2px rgb(203, 181, 127);
+}
+
+.logo img {
+    padding: 10px 20px;
+    vertical-align: middle;
+}
+
+.logo,
+nav,
+.haut_de_page li,
+.logo img {
+    display: inline-block;
+}
+
+/* Styles du sous-menu */
+.sous-menu {
+    display: none; /* Cacher le sous-menu par défaut */
+    position: absolute; /* Position par rapport au parent */
+    top: 15px; /* Ajuster si nécessaire */
+    background-color: rgb(249, 243, 236);
+    border-radius: 5%;
+    padding-top: 5px;
+    text-align: left;
+    z-index: 50; /* Éviter les chevauchements */
+}
+
+.haut_de_page li:hover .sous-menu {
+    display: block;
+}
+
+.sous-menu li {
+    margin: 7px;
+}
+
+/* Section de bienvenue */
+.bienvenue {
+    font-family: Cookie;
+    text-align: center;
+    color: rgb(241, 232, 217);
+    padding: 10px;
+    font-size: 30px;
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-image: url(https://img.freepik.com/free-photo/flat-lay-types-bread-black-copy-space-background_23-2148432256.jpg?w=1800&t=st=1710112744~exp=1710113344~hmac=73c7ae37e7501f824b0de4e71ec7ea2963c8378a750e19d41cca1a723ad7a613);
+}
+
+div.bienvenue div {
+    border: 2px solid;
+    border-color: rgb(241, 232, 217);
+    display: inline-block;
+    padding: 10px;
+}
+
+/* Conteneur de la page et enveloppe du contenu */
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 50px;
+}
+
+/* Styles du pied de page */
+footer {
+    background-color: rgb(26, 17, 0);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+}
+
+.bas_de_page li {
+    list-style: none;
+    margin-right: 15px;
+    font-size: 14px;
+    color: rgb(231, 225, 212);
+}
+
+.bas_de_page nav {
+    text-align: right;
+}
+
+.bas_de_page a {
+    text-decoration: none;
+    color: rgb(231, 225, 212);
+    font-size: 14px;
+}
+
+.bas_de_page a:hover {
+    color: rgb(208, 155, 30);
+}
+
+.bas_de_page li:last-of-type {
+    margin-right: 50px;
+}
+
+.bas_de_page nav,
+.bas_de_page li {
+    display: inline-block;
+}
+
+/* Section des produits sur la page d'accueil */
+.produit_accueil div {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+}
+
+.produit_accueil h2 {
+    font-family: Cookie;
+    font-size: 40px;
+    color: rgb(26, 17, 0);
+    text-align: center;
+    margin-top: 10px; /* Add some top margin for spacing */
+}
+
+.produit_accueil img {
+    padding-left: 30%;
+
+}
+
+.produit_accueil p {
+    text-align: left;
+    width: 75%;
+    font-size: 20px; /* Ajustement de la taille de la police */
+}
+
+.produit_accueil h4 {
+    font-family: Cookie;
+    font-size: 40px;
+    color: rgb(208, 155, 30);
+    text-align: left;
+    background-color: rgb(241, 230, 195);
+    padding: 10px;
+    border-radius: 5%;
+    display: inline;
+    margin-top: 10px; /* Add some top margin for spacing */
+    margin-bottom: 0; /* Remove bottom margin */
+}
+
+.produit_accueil div > div {
+    display: inline-block;
+    padding-left: 5%;
+}
+
+/* Section d'informations d'introduction */
+.intro_info {
+    background-image: url(https://laboulangeriedemarie.com/wp-content/uploads/2019/12/image-patisserie-tartelette_la-boulangerie-de-marie.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+}
+
+.intro_info div {
+    align-items: center;
+    width: 45%;
+    text-align: center;
+    padding-top: 3%;
+}
+
+.intro_info h2 {
+    font-family: Cookie;
+    font-size: 40px;
+    color: rgb(26, 17, 0);
+    background-color: rgba(241, 230, 195, 0.678);
+    padding: 10px;
+    border-radius: 5%;
+    display: inline;
+}
+
+.intro_info li {
+    text-align: left;
+    font-family: Cookie;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(26, 17, 0);
+    padding: 5px;
+    padding-left: 42%;
+    list-style-position: inside;
+}
+
+.intro_info ul {
+    background-color: rgba(241, 230, 195, 0.78);
+    border-radius: 5%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.intro_info iframe {
+    margin-bottom: 50px;
+}
+
+.intro_info p {
+    background-color: rgba(241, 230, 195, 0.78);
+    border-radius: 5%;
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: left;
+    font-family: Cookie;
+    font-size: 30px;
+    color: rgb(26, 17, 0);
+    padding: 5px;
+}
