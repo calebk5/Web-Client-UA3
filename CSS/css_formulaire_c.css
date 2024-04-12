@@ -1,0 +1,244 @@
+/* Import de la police Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cookie:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Styles généraux pour le HTML et le body */
+html,
+body {
+    font-size: 14px;
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/* Styles pour l'en-tête */
+header {
+    background-color: rgb(255, 255, 255);
+    outline: 1px solid rgb(43, 23, 0); /* Outline is now combined */
+}
+
+/* Styles pour la partie supérieure de la page */
+.haut_de_page {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.haut_de_page li {
+    list-style: none;
+    margin-right: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+    text-align: right; /* Moved from haut_de_page nav to haut_de_page li */
+}
+
+.haut_de_page nav {
+    text-align: right;
+}
+
+.haut_de_page a {
+    text-decoration: none;
+    color: rgb(208, 155, 30);
+    text-transform: uppercase;
+}
+
+.haut_de_page a:hover,
+.haut_de_page a:active {
+    color: rgb(43, 23, 0);
+}
+
+.haut_de_page li:last-of-type {
+    margin-right: 50px;
+}
+
+/* Styles pour le logo */
+.logo {
+    font-family: Cookie;
+    padding-left: 30px;
+    font-size: 27px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: rgb(43, 23, 0);
+    text-shadow: 2px 2px 2px rgb(203, 181, 127);
+}
+
+.logo img {
+    padding: 10px 20px;
+    vertical-align: middle;
+}
+
+/* Styles pour les sous-éléments dans l'en-tête */
+.logo,
+nav,
+.haut_de_page li,
+.logo img {
+    display: inline-block;
+}
+
+/* Styles pour les sous-menus */
+.sous-menu {
+    display: none; /* Cacher le sous-menu par défaut */
+    position: absolute; /* Position par rapport au parent */
+    top: 15px; /* Ajuster si nécessaire */
+    background-color: rgb(249, 243, 236);
+    border-radius: 5%;
+    padding-top: 5px;
+    text-align: left;
+    z-index: 50; /* Éviter les chevauchements */
+}
+
+.haut_de_page li:hover .sous-menu {
+    display: block;
+}
+
+.sous-menu li {
+    margin: 7px;
+}
+
+/* Styles pour le conteneur de la page */
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Styles pour l'enveloppe de contenu */
+#content-wrap {
+    padding-bottom: 50px;
+}
+
+/* Styles pour le pied de page */
+footer {
+    background-color: rgb(26, 17, 0);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+}
+
+.bas_de_page li {
+    list-style: none;
+    margin-right: 15px;
+    font-size: 14px;
+    color: rgb(231, 225, 212);
+}
+
+.bas_de_page nav {
+    text-align: right;
+}
+
+.bas_de_page a {
+    text-decoration: none;
+    color: rgb(231, 225, 212);
+    font-size: 14px;
+}
+
+.bas_de_page a:hover {
+    color: rgb(208, 155, 30);
+}
+
+.bas_de_page li:last-of-type {
+    margin-right: 50px;
+}
+
+.bas_de_page nav,
+.bas_de_page li {
+    display: inline-block;
+}
+
+/* Styles supplémentaires */
+label.subtitle {
+    font-style: italic;
+    font-size: 20px;
+}
+
+.date {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid rgb(63, 43, 5);
+}
+
+main {
+    position: relative;
+    top: 0px;
+    max-width: 1200px;
+    height: 100%;
+    width: 100%;
+}
+
+main .content {
+    position: relative;
+    width: 98.3%;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(213, 205, 185);
+}
+
+.content {
+    justify-content: center;
+    padding-left: 4em;
+    padding-right: 4em;
+    text-align: center;
+    margin: 5%;
+    box-shadow: 8px 8px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: Cookie;
+    font-size: 40px;
+    font-weight: 200;
+    color: rgb(233, 228, 214);
+    background-color: rgba(44, 26, 4, 0.71);
+    width: 100%;
+}
+
+.formulaire {
+    margin-top: 3%;
+    background-color: rgb(213, 205, 185);
+}
+
+.formulaire button,
+.formulaire legend {
+    margin-top: 10px;
+    font-family: Cookie;
+    font-size: 40px;
+    color: rgb(241, 230, 195);
+    background-color: rgba(44, 26, 4, 0.71);
+    border-radius: 5%;
+    display: inline;
+}
+.bouton{
+    cursor: pointer;
+}
+
+.formulaire label {
+    font-size: 20px;
+    border-bottom: 2px dotted rgba(44, 26, 4, 0.71);
+}
+
+fieldset {
+    margin: 10px;
+    border-color: rgba(44, 26, 4, 0.71);
+}
+
+.invalid-field {
+    border: 2px solid red !important;
+}
