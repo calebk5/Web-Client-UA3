@@ -11,4 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
             img.style.transition = 'transform 0.5s ease-in-out';
         });
     });
+
+    window.onload = function() {
+        alert("Bienvenue sur le site de Totoko's Temptations! Découvrez nos offres spéciales.");
+      };
 });

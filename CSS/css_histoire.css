@@ -1,6 +1,11 @@
 /* Importation des polices Google */
 @import url('https://fonts.googleapis.com/css2?family=Cookie:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 /* Réinitialisation des styles par défaut */
 html, body {
     font-size: 14px;
@@ -153,8 +158,7 @@ footer {
     height: 400px;
     font-size: 50px;
     text-align: center;
-    
-    
+    animation: fadeIn 2s;
 }
 
 .titre h1{
@@ -168,6 +172,7 @@ footer {
     left: 50%; 
     transform: translate(-50%, -50%); 
     text-align: center;
+    animation: fadeIn 2s;
 }
 
 .titre div {

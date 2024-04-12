@@ -67,6 +67,4 @@ let validerFormulaire = function(event) {
     if (!validerIdentite()) {
         event.preventDefault();
     }
-}
-
-document.querySelector('form').addEventListener('submit', validerFormulaire);
+};
