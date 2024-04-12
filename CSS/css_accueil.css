@@ -1,6 +1,15 @@
 /* Importation des polices Google */
 @import url('https://fonts.googleapis.com/css2?family=Cookie:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.bienvenue {
+    animation: fadeIn 2s;
+}
+
 /* Réinitialisation des styles par défaut */
 html, body {
     font-size: 14px;
@@ -102,10 +111,15 @@ nav,
     color: rgb(241, 232, 217);
     padding: 10px;
     font-size: 30px;
+    transition: all 0.3s ease;
     height: 500px;
     width: 100%;
     background-size: cover;
     background-image: url(https://img.freepik.com/free-photo/flat-lay-types-bread-black-copy-space-background_23-2148432256.jpg?w=1800&t=st=1710112744~exp=1710113344~hmac=73c7ae37e7501f824b0de4e71ec7ea2963c8378a750e19d41cca1a723ad7a613);
+}
+
+h1.bienvenue:hover {
+    transform: scale(1.1);
 }
 
 div.bienvenue div {
@@ -207,6 +221,7 @@ footer {
 .produit_accueil div > div {
     display: inline-block;
     padding-left: 5%;
+
 }
 
 /* Section d'informations d'introduction */

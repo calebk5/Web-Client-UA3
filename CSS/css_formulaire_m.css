@@ -1,6 +1,11 @@
 /* Import de la police Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cookie:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 /* Styles généraux pour le HTML et le body */
 html,
 body {
@@ -186,6 +191,7 @@ main .content {
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(213, 205, 185);
+    animation: fadeIn 2s;
 }
 
 .content {
