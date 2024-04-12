@@ -1,4 +1,4 @@
-let validerIdentite = function() {
+function validerIdentite() {
     let prenom = document.getElementById('prenom');
     let nom = document.getElementById('nom');
     let telephone = document.getElementById('numero_de_telephone');
@@ -7,7 +7,7 @@ let validerIdentite = function() {
     let mineur = document.querySelector('input[name="mineur"]:checked');
     let valid = true;
 
-    // Validation de prénom
+    // Validation of first name
     if (prenom.value.trim() === '') {
         prenom.classList.add('invalid-field');
         alert('Veuillez entrer votre prénom.');
@@ -16,7 +16,7 @@ let validerIdentite = function() {
         prenom.classList.remove('invalid-field');
     }
 
-    // Validation de nom
+    // Validation of last name
     if (nom.value.trim() === '') {
         nom.classList.add('invalid-field');
         alert('Veuillez entrer votre nom.');
@@ -25,7 +25,7 @@ let validerIdentite = function() {
         nom.classList.remove('invalid-field');
     }
 
-    // Validation de numéro de téléphone
+    // Validation of phone number
     let regexTelephone = /^(\([0-9]{3}\)\s*|[0-9]{3}\-)[0-9]{3}-[0-9]{4}$/;
     if (!regexTelephone.test(telephone.value)) {
         telephone.classList.add('invalid-field');
@@ -35,7 +35,7 @@ let validerIdentite = function() {
         telephone.classList.remove('invalid-field');
     }
 
-    // Validation de courriel
+    // Validation of email
     let regexCourriel = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (!regexCourriel.test(courriel.value)) {
         courriel.classList.add('invalid-field');
@@ -45,13 +45,13 @@ let validerIdentite = function() {
         courriel.classList.remove('invalid-field');
     }
 
-    //Validation de mineur ou non
+    // Validation for age
     if (!mineur) {
         alert('Veuillez sélectionner si vous avez plus de 18 ans.');
         valid = false;
     }
 
-    // Validation de message
+    // Validation of message
     if (message.value.trim() === '') {
         message.classList.add('invalid-field');
         alert('Veuillez entrer votre message.');
@@ -63,8 +63,16 @@ let validerIdentite = function() {
     return valid;
 }
 
-let validerFormulaire = function(event) {
+function validerFormulaire(event) {
     if (!validerIdentite()) {
         event.preventDefault();
+        return false;
     }
-};
+    var prenom = document.getElementById('prenom').value;
+    var nom = document.getElementById('nom').value;
+
+    // Affiche l'alerte avec le prénom, le nom et la confirmation d'envoi
+    alert("Vous etes maintenant inscrit, " + prenom + " " + nom );
+    return true;
+} };
+

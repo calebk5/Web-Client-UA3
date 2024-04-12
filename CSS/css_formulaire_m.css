@@ -244,4 +244,5 @@ fieldset {
 
 .invalid-field {
     border: 2px solid red !important;
+    background-color: #fce1e5 !important;
 }
