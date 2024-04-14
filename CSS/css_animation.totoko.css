@@ -1,0 +1,394 @@
+/*https://www.codingnepalweb.com/animated-3d-flip-buttons-html-css/ au cas ou j'ai besoin des boutons 3D*/
+/* Importation des polices Google */
+@import url('https://fonts.googleapis.com/css2?family=Cookie:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+body{
+    margin:0em;
+    
+}
+
+/*Effet de fumee--------------------------------------------------------------------------------------*/
+.smoke_field {
+    position: absolute;
+    bottom: -25%;
+    left: 18%;
+}
+
+.smoke_effect {
+    position:absolute;
+    top:40%;
+    left:5%;
+    margin: 0;
+    padding: 0;
+}
+.smoke_bit {
+    position: absolute;
+    list-style: none;
+    width: 5em;
+    height: 5em;
+    background : #262626;
+    border-radius: 50%;
+}
+.smoke_bit:nth-child(even)
+{
+    animation: animateEven 2.8s linear infinite;
+}
+.smoke_bit:nth-child(odd)
+{
+    animation: animateOdd 2.8s linear infinite;
+}
+@keyframes animateEven{
+    0%{
+        transform: translate(0em,0em) scale(1);
+        opacity:1;
+        filter: blur(0.3125em);
+    }
+    100%{
+        transform: translate(4.6875em,-31.25em) scale(3);
+        opacity:0;
+        filter: blur(0.625em);
+    }
+}
+@keyframes animateOdd{
+    0%{
+        transform: translate(0em,0em) scale(1);
+        opacity:1;
+        filter: blur(0.3125em);
+    }
+    100%{
+        transform: translate(-4.6875em,-31.25em) scale(3);
+        opacity:0;
+        filter: blur(0.625em);
+    }
+}
+
+.smoke_bit:nth-child(1){
+    animation-delay:0s;
+}
+.smoke_bit:nth-child(2){
+    animation-delay:.4s;
+}
+.smoke_bit:nth-child(3){
+    animation-delay:.8s;
+}
+.smoke_bit:nth-child(4){
+    animation-delay:1.2s;
+}
+.smoke_bit:nth-child(5){
+    animation-delay:1.6s;
+}
+.smoke_bit:nth-child(6){
+    animation-delay:2s;
+}
+.smoke_bit:nth-child(7){
+    animation-delay:2.4s;
+}
+.smoke_bit:nth-child(8){
+    animation-delay:2.8s;
+}
+
+
+
+
+/*Four pour les patisseries--------------------------------------------------------------------------*/
+.test {
+    position: relative;
+    display: block;
+    width:100%;
+    height: 125em;
+    background-color: red;
+    background-image: url(../Images/Totoko.Animation.Background.png); 
+    background-size: auto;
+}
+
+.furnace {
+    position: absolute;
+    left: 5%;
+    bottom: -14.6875em;
+    background-image: url(../Images/Totoko.Animation.Furnace.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0em;
+    margin: 0em;
+    transform: translateY(85%);
+    width: 30%;
+    height: 80%;
+    z-index: 10000;
+}
+
+.kiln {
+    
+    background-color: black;
+    width:80%;
+    height:20%;
+    transform: translate(12.5%, 400%);
+    /* width: 75%;
+    height: 20%; */
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    background: linear-gradient(red, yellow);
+    /* background: orange; */
+}
+.conveyor_total {
+    /* z-index:1000; */
+    /* transform: translate(0% 40%); */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -14.6875em;
+    left: 0em;
+    /* background-color: red; */
+}
+
+.conveyor{
+    position: absolute;
+    z-index:4;
+    background-color: #373737;
+    height: 10%;
+    width: 70%;
+    bottom: 0em;
+    transform:translateY(777%);
+}
+
+.conveyor_gear{
+    position: absolute;
+    z-index:200;
+    width: 6.25em;
+    height: 6.25em;
+    border-radius: 100%;
+    animation: cog 4s linear infinite;
+    right:27%;
+    bottom:-75%;
+}
+@keyframes cog{
+    100%{
+        transform: rotate(360deg)
+    }
+}
+
+
+
+
+
+
+
+/*Boutons Bonbon------------------------------------------------------------------------------------*/
+.button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 1em 2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 0.25em 0.125em;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+  .buttoncake {
+    margin-left: 65%;
+    background-color: #382403;
+    color: rgb(255, 255, 255); 
+    border: 0.125em solid #f83ce8;
+  }
+  .buttoncake:hover {
+    background-color: rgb(255, 247, 0); 
+    color: rgb(0, 0, 0);
+    font-weight:bold;
+  }
+  .buttonmuffin {
+    background-color: rgb(145, 32, 87); 
+    color: rgb(255, 255, 255); 
+    border: 0.125em solid #3e2c08;
+  }
+  .buttonmuffin:hover {
+    background-color: #ff9100;
+    color: rgb(0, 0, 0);
+    font-weight:bold;
+  }
+
+
+
+/*to be added*/
+
+/* The animation code */
+
+
+.totoko {
+    position: absolute;
+    width:6.25em;
+    height:12.5em;
+    bottom:100%;
+    left:90%;
+    background-image: url(../Images/Totoko.Animation.Chefbase.png); 
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  /* The element to apply the animation to */
+.pastry {
+    position: absolute;
+    z-index:3;
+    width: 12.5em;
+    height: 12.5em;
+    bottom:100%;
+    left:70%;
+    background-color: none;
+    background-image: url(../Images/Totoko.Animation.Dough.png);
+    animation-name: ovendough;
+    animation-duration: 3s;
+  }
+
+@keyframes ovendough{
+    0%{
+        transform:translateX(100%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+}
+
+
+.muffin{
+    position: absolute;
+    z-index:3;
+    width: 12.5em;
+    height: 12.5em;
+    bottom:100%;
+    left:70%;
+    background-color: none;
+    background-image: url(../Images/Totoko.Animation.Muffin.png);
+    animation-name: muffinbake;
+    animation-duration: 4s;
+}
+
+@keyframes muffinbake{
+    0%{
+        transform: translateX(-250%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.cake{
+    position: absolute;
+    z-index:3;
+    width: 12.5em;
+    height: 12.5em;
+    bottom:100%;
+    left:70%;
+    background-color: none;
+    background-image: url(../Images/Totoko.Animation.Cake.png);
+    animation-name: cakebake;
+    animation-duration: 4s;
+}
+
+@keyframes cakebake{
+    0%{
+        transform: translateX(-250%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.animation {
+    display: all;
+    height: 100%;
+    width: 100%;
+}
+
+.background-image {
+    position: absolute;
+    background-size: cover;
+    height:200%;
+    width:100%;
+}
+
+/*Le nav de caleb -------------------------------------------------------------------------------------------------------*/
+header {
+    background-color: rgb(255, 255, 255);
+    outline: 0.0625em solid rgb(43, 23, 0); /* Ajout d'une bordure solide */
+}
+
+/* Navigation en haut de la page */
+.haut_de_page {
+    max-width: 93.75em;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.haut_de_page li {
+    list-style: none;
+    margin-right: 0.9375em;
+    font-size: 0.875em;
+    font-weight: 400;
+    position: relative;
+}
+
+.haut_de_page nav {
+    text-align: right;
+}
+
+.haut_de_page a {
+    text-decoration: none;
+    color: rgb(208, 155, 30);
+    text-transform: uppercase;
+}
+
+.haut_de_page a:hover,
+.haut_de_page a:active {
+    color: rgb(43, 23, 0);
+}
+
+.haut_de_page li:last-of-type {
+    margin-right: 3.125em;
+}
+
+/* Styles du logo */
+.logo {
+    font-family: Cookie;
+    padding-left: 1.875em;
+    font-size: 1.6875em;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: rgb(43, 23, 0);
+    text-shadow: 0.125em 0.125em 0.125em rgb(203, 181, 127);
+}
+
+.logo img {
+    padding: 0.625em 1.25em;
+    vertical-align: middle;
+}
+
+.logo,
+nav,
+.haut_de_page li,
+.logo img {
+    display: inline-block;
+}
+
+/* Styles du sous-menu */
+.sous-menu {
+    display: none; /* Cacher le sous-menu par défaut */
+    position: absolute; /* Position par rapport au parent */
+    top: 0.9375; /* Ajuster si nécessaire */
+    background-color: rgb(249, 243, 236);
+    border-radius: 5%;
+    padding-top: 0.3125em;
+    text-align: left;
+    z-index: 50; /* Éviter les chevauchements */
+}
+
+.haut_de_page li:hover .sous-menu {
+    display: block;
+}
+
+.sous-menu li {
+    margin: 0.4375em;
+}
