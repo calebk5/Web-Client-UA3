@@ -1,13 +1,111 @@
-/*https://www.codingnepalweb.com/animated-3d-flip-buttons-html-css/ au cas ou j'ai besoin des boutons 3D*/
 /* Importation des polices Google */
 @import url('https://fonts.googleapis.com/css2?family=Cookie:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-body{
-    margin:0em;
-    
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-/*Effet de fumee--------------------------------------------------------------------------------------*/
+body {
+    animation: fadeIn 2s;
+}
+
+/* Réinitialisation des styles par défaut */
+html, body {
+    font-size: 14px;
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+/* Styles de l'en-tête */
+header {
+    background-color: rgb(255, 255, 255);
+    outline: 1px solid rgb(43, 23, 0); /* Ajout d'une bordure solide */
+}
+
+/* Navigation en haut de la page */
+.haut_de_page {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.haut_de_page li {
+    list-style: none;
+    margin-right: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+}
+
+.haut_de_page nav {
+    text-align: right;
+}
+
+.haut_de_page a {
+    text-decoration: none;
+    color: rgb(208, 155, 30);
+    text-transform: uppercase;
+}
+
+.haut_de_page a:hover,
+.haut_de_page a:active {
+    color: rgb(43, 23, 0);
+}
+
+.haut_de_page li:last-of-type {
+    margin-right: 50px;
+}
+
+/* Styles du logo */
+.logo {
+    font-family: Cookie;
+    padding-left: 30px;
+    font-size: 27px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: rgb(43, 23, 0);
+    text-shadow: 2px 2px 2px rgb(203, 181, 127);
+}
+
+.logo img {
+    padding: 10px 20px;
+    vertical-align: middle;
+}
+
+.logo,
+nav,
+.haut_de_page li,
+.logo img {
+    display: inline-block;
+}
+
+/* Styles du sous-menu */
+.sous-menu {
+    display: none; /* Cacher le sous-menu par défaut */
+    position: absolute; /* Position par rapport au parent */
+    top: 15px; /* Ajuster si nécessaire */
+    background-color: rgb(249, 243, 236);
+    border-radius: 5%;
+    padding-top: 5px;
+    text-align: left;
+    z-index: 50; /* Éviter les chevauchements */
+}
+
+.haut_de_page li:hover .sous-menu {
+    display: block;
+}
+
+.sous-menu li {
+    margin: 7px;
+}
+
+
+/* Effet de fumee */
 .smoke_field {
     position: absolute;
     bottom: -25%;
@@ -90,14 +188,14 @@ body{
 
 
 
-/*Four pour les patisseries--------------------------------------------------------------------------*/
+/* Four pour les patisseries */
 .test {
     position: relative;
     display: block;
     width:100%;
     height: 125em;
     background-color: red;
-    background-image: url(../Images/Totoko.Animation.Background.png); 
+    background-image: url(../Images/Images_animation/Totoko.Animation.Background.png); 
     background-size: auto;
 }
 
@@ -105,7 +203,7 @@ body{
     position: absolute;
     left: 5%;
     bottom: -14.6875em;
-    background-image: url(../Images/Totoko.Animation.Furnace.png);
+    background-image: url(../Images/Images_animation/Totoko.Animation.Furnace.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -123,22 +221,16 @@ body{
     width:80%;
     height:20%;
     transform: translate(12.5%, 400%);
-    /* width: 75%;
-    height: 20%; */
     border-top-left-radius: 100%;
     border-top-right-radius: 100%;
     background: linear-gradient(red, yellow);
-    /* background: orange; */
 }
 .conveyor_total {
-    /* z-index:1000; */
-    /* transform: translate(0% 40%); */
     width: 100%;
     height: 100%;
     position: absolute;
     bottom: -14.6875em;
     left: 0em;
-    /* background-color: red; */
 }
 
 .conveyor{
@@ -167,12 +259,6 @@ body{
     }
 }
 
-
-
-
-
-
-
 /*Boutons Bonbon------------------------------------------------------------------------------------*/
 .button {
     background-color: #04AA6D;
@@ -187,34 +273,31 @@ body{
     transition-duration: 0.4s;
     cursor: pointer;
 }
-  .buttoncake {
+
+.buttoncake {
     margin-left: 65%;
     background-color: #382403;
     color: rgb(255, 255, 255); 
     border: 0.125em solid #f83ce8;
-  }
-  .buttoncake:hover {
+}
+
+.buttoncake:hover {
     background-color: rgb(255, 247, 0); 
     color: rgb(0, 0, 0);
     font-weight:bold;
-  }
-  .buttonmuffin {
+}
+
+.buttonmuffin {
     background-color: rgb(145, 32, 87); 
     color: rgb(255, 255, 255); 
     border: 0.125em solid #3e2c08;
-  }
-  .buttonmuffin:hover {
+}
+
+.buttonmuffin:hover {
     background-color: #ff9100;
     color: rgb(0, 0, 0);
     font-weight:bold;
-  }
-
-
-
-/*to be added*/
-
-/* The animation code */
-
+}
 
 .totoko {
     position: absolute;
@@ -222,10 +305,10 @@ body{
     height:12.5em;
     bottom:100%;
     left:90%;
-    background-image: url(../Images/Totoko.Animation.Chefbase.png); 
+    background-image: url(../Images/Images_animation/Totoko.Animation.Chefbase.png); 
     background-size: cover;
     background-repeat: no-repeat;
-  }
+}
 
   /* The element to apply the animation to */
 .pastry {
@@ -236,10 +319,10 @@ body{
     bottom:100%;
     left:70%;
     background-color: none;
-    background-image: url(../Images/Totoko.Animation.Dough.png);
+    background-image: url(../Images/Images_animation/Totoko.Animation.Dough.png);
     animation-name: ovendough;
     animation-duration: 3s;
-  }
+}
 
 @keyframes ovendough{
     0%{
@@ -251,7 +334,7 @@ body{
 }
 
 
-.muffin{
+.muffin {
     position: absolute;
     z-index:3;
     width: 12.5em;
@@ -259,12 +342,12 @@ body{
     bottom:100%;
     left:70%;
     background-color: none;
-    background-image: url(../Images/Totoko.Animation.Muffin.png);
+    background-image: url(../Images/Images_animation/Totoko.Animation.Muffin.png);
     animation-name: muffinbake;
     animation-duration: 4s;
 }
 
-@keyframes muffinbake{
+@keyframes muffinbake {
     0%{
         transform: translateX(-250%);
     }
@@ -273,7 +356,7 @@ body{
     }
 }
 
-.cake{
+.cake {
     position: absolute;
     z-index:3;
     width: 12.5em;
@@ -281,12 +364,12 @@ body{
     bottom:100%;
     left:70%;
     background-color: none;
-    background-image: url(../Images/Totoko.Animation.Cake.png);
+    background-image: url(../Images/Images_animation/Totoko.Animation.Cake.png);
     animation-name: cakebake;
     animation-duration: 4s;
 }
 
-@keyframes cakebake{
+@keyframes cakebake {
     0%{
         transform: translateX(-250%);
     }
@@ -308,87 +391,54 @@ body{
     width:100%;
 }
 
-/*Le nav de caleb -------------------------------------------------------------------------------------------------------*/
-header {
-    background-color: rgb(255, 255, 255);
-    outline: 0.0625em solid rgb(43, 23, 0); /* Ajout d'une bordure solide */
-}
 
-/* Navigation en haut de la page */
-.haut_de_page {
-    max-width: 93.75em;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.haut_de_page li {
-    list-style: none;
-    margin-right: 0.9375em;
-    font-size: 0.875em;
-    font-weight: 400;
+/* Conteneur de la page et enveloppe du contenu */
+#page-container {
     position: relative;
+    min-height: 100vh;
 }
 
-.haut_de_page nav {
+#content-wrap {
+    padding-bottom: 50px;
+}
+
+/* Styles du pied de page */
+footer {
+    background-color: rgb(26, 17, 0);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+}
+
+.bas_de_page li {
+    list-style: none;
+    margin-right: 15px;
+    font-size: 14px;
+    color: rgb(231, 225, 212);
+}
+
+.bas_de_page nav {
     text-align: right;
 }
 
-.haut_de_page a {
+.bas_de_page a {
     text-decoration: none;
+    color: rgb(231, 225, 212);
+    font-size: 14px;
+}
+
+.bas_de_page a:hover {
     color: rgb(208, 155, 30);
-    text-transform: uppercase;
 }
 
-.haut_de_page a:hover,
-.haut_de_page a:active {
-    color: rgb(43, 23, 0);
+.bas_de_page li:last-of-type {
+    margin-right: 50px;
 }
 
-.haut_de_page li:last-of-type {
-    margin-right: 3.125em;
-}
-
-/* Styles du logo */
-.logo {
-    font-family: Cookie;
-    padding-left: 1.875em;
-    font-size: 1.6875em;
-    text-transform: uppercase;
-    font-weight: 400;
-    color: rgb(43, 23, 0);
-    text-shadow: 0.125em 0.125em 0.125em rgb(203, 181, 127);
-}
-
-.logo img {
-    padding: 0.625em 1.25em;
-    vertical-align: middle;
-}
-
-.logo,
-nav,
-.haut_de_page li,
-.logo img {
+.bas_de_page nav,
+.bas_de_page li {
     display: inline-block;
-}
-
-/* Styles du sous-menu */
-.sous-menu {
-    display: none; /* Cacher le sous-menu par défaut */
-    position: absolute; /* Position par rapport au parent */
-    top: 0.9375; /* Ajuster si nécessaire */
-    background-color: rgb(249, 243, 236);
-    border-radius: 5%;
-    padding-top: 0.3125em;
-    text-align: left;
-    z-index: 50; /* Éviter les chevauchements */
-}
-
-.haut_de_page li:hover .sous-menu {
-    display: block;
-}
-
-.sous-menu li {
-    margin: 0.4375em;
 }
