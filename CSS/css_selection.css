@@ -1,3 +1,11 @@
+@media screen and (max-width: 1020px) {
+    .mains-s{
+        width: 90%
+    }
+
+}
+    
+
 /* Importation de la police Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cookie:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
@@ -228,4 +236,46 @@ div.produits {
     display: flex;
     flex-wrap: wrap ;
     justify-content: center;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Cache la liste de navigation par défaut et affiche le menu hamburger en dessous de 1040px */
+@media (max-width: 1120px) {
+    nav ul {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Style pour le menu déroulant */
+.nav-active {
+    display: block;
+    position: absolute;
+    background-color: white;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.nav-active li {
+    text-align: center;
+    padding: 12px 16px;
+}
+
+.nav-active li:hover {
+    background-color: #f1f1f1;
 }

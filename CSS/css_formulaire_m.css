@@ -1,3 +1,8 @@
+@media screen and (max-width: 1020px) {
+    .main{
+        width: 90%
+    }
+}
 /* Import de la police Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cookie:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
@@ -14,6 +19,9 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
+    max-width: 100%; /* Empêche le débordement */
+    overflow-x: hidden; /* Cache le défilement horizontal */
+    padding: 0; /* Supprime les paddings par défaut */
 }
 
 /* Styles pour l'en-tête */
@@ -113,6 +121,9 @@ nav,
 #content-wrap {
     padding-bottom: 50px;
 }
+
+
+
 
 /* Styles pour le pied de page */
 footer {
@@ -219,8 +230,15 @@ h1 {
 .formulaire {
     margin-top: 3%;
     background-color: rgb(213, 205, 185);
-}
+    display: flex; /* Active Flexbox */
+    flex-direction: column; /* Organise les enfants verticalement */
+    align-items: center; /* Centre les éléments horizontalement dans le conteneur */
+    justify-content: flex-start; /* Alignement vertical au début du conteneur */
+    width: 80%; /* Taille par défaut adaptée aux grands écrans */
+    max-width: 600px; /* Limite la taille maximale du formulaire */
+    margin: auto; /* Centre le formulaire horizontalement */
 
+}
 .formulaire button,
 .formulaire legend {
     margin-top: 10px;
@@ -230,19 +248,66 @@ h1 {
     background-color: rgba(44, 26, 4, 0.71);
     border-radius: 5%;
     display: inline;
+    width: 100%; /* Garde la largeur originale des éléments de formulaire */
+    max-width: 300px; /* Ou une autre largeur spécifique si nécessaire */
 }
 
-.formulaire label {
-    font-size: 20px;
-    border-bottom: 2px dotted rgba(44, 26, 4, 0.71);
+
+.bouton{
+    cursor: pointer;
 }
+
 
 fieldset {
     margin: 10px;
     border-color: rgba(44, 26, 4, 0.71);
 }
+.formulaire label {
+    font-size: 20px;
+    border-bottom: 2px dotted rgba(44, 26, 4, 0.71);
+}
+
+
+legend {
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+
+/* Ajustements pour les tablettes */
 
 .invalid-field {
     border: 2px solid red !important;
     background-color: #fce1e5 !important;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+/* Style pour le menu déroulant */
+.nav-active {
+    display: block;
+    position: absolute;
+    background-color: white;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.nav-active li {
+    text-align: center;
+    padding: 12px 16px;
+}
+
+.nav-active li:hover {
+    background-color: #f1f1f1;
 }

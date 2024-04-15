@@ -1,3 +1,4 @@
+
 /* Importation des polices Google */
 @import url('https://fonts.googleapis.com/css2?family=Cookie:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
@@ -153,8 +154,12 @@ footer {
 
 /* Styles de tableau et de video */
 .titres {
-    text-align: center;
+    width: 100%; /* Assure que les titres prennent toute la largeur */
+    display: flex;
+    justify-content: center; /* Centre le contenu horizontalement */
+    margin-bottom: 20px; /* Espace en dessous des titres */
 }
+
 
 .titres h1 {
     text-align: center;
@@ -192,6 +197,134 @@ th {
 
 .video {
     display: flex;
-    justify-content: center;
-    padding: 20px;
+    justify-content: center; /* Centre la vidéo horizontalement */
+    width: 100%; /* Assure que la section vidéo prend toute la largeur */
+    padding: 20px 0; /* Ajoute un padding autour de la vidéo */
+    height: auto; /* Maintient l'aspect ratio de la vidéo */
+}
+/* Pour les grands écrans, vous pouvez limiter la taille de la vidéo */
+@media (min-width: 1024px) {
+    .video video {
+        max-width: 800px; /* Limite la largeur maximale de la vidéo */
+    }
+}
+
+/* Pour les tablettes */
+@media (max-width: 768px) {
+    .video video {
+        max-width: 700px; /* Réduit la largeur maximale de la vidéo */
+    }
+}
+
+/* Pour les mobiles */
+@media (max-width: 700px) {
+    .video video {
+        max-width: 300px; /* Encore plus petite pour les petits écrans */
+    }
+}
+
+
+.main-e {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments horizontalement */
+    width: 100%; /* Prend toute la largeur disponible */
+    margin-top: 20px; /* Espace au-dessus du contenu principal */
+}
+.tableau {
+    width: 100%; /* Assure que le tableau prend toute la largeur disponible */
+    max-width: 100%; /* Empêche le tableau de déborder */
+    overflow-x: auto; /* Permet le défilement horizontal si nécessaire */
+}
+
+.tableau img {
+    width: 100px; /* Définissez une largeur fixe pour les images pour la cohérence */
+    height: auto; /* Garde les proportions des images */
+}
+
+.tableau th, .tableau td {
+    text-align: left;
+    padding: 8px; /* Ajoute un peu d'espace autour du texte dans les cellules */
+}
+/* Pour les tablettes */
+@media (max-width: 768px) {
+    .tableau th, .tableau td {
+        padding: 6px; /* Réduit le padding */
+        font-size: 0.9em; /* Réduit la taille de la police */
+    }
+
+    .tableau img {
+        width: 80px; /* Réduit la taille des images */
+    }
+}
+
+/* Pour les téléphones mobiles */
+@media (max-width: 480px) {
+    .tableau th, .tableau td {
+        padding: 4px;
+        font-size: 0.8em; /* Encore plus petit pour les petits écrans */
+    }
+
+    .tableau img {
+        width: 60px; /* Plus petite image pour les petits écrans */
+    }
+}
+
+
+/* Style pour le bouton hamburger */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Cache la liste de navigation par défaut et affiche le menu hamburger en dessous de 1040px */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Cache la liste de navigation par défaut et affiche le menu hamburger en dessous de 1040px */
+@media (max-width: 1120px) {
+    nav ul {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Style pour le menu déroulant */
+.nav-active {
+    display: block;
+    position: absolute;
+    background-color: white;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.nav-active li {
+    text-align: center;
+    padding: 12px 16px;
+}
+
+.nav-active li:hover {
+    background-color: #f1f1f1;
 }
