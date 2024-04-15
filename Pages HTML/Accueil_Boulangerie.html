@@ -7,6 +7,7 @@
     <title>Totoko's Temptations</title> <!-- Titre de la page -->
     <link rel="stylesheet" href="../CSS/css_accueil.css"> <!-- Liaison vers la feuille de style CSS -->
     <script src="../Script/Script_Accueil.js"></script>
+
 </head>
 
 <body>
@@ -18,6 +19,11 @@
                 <div class="haut_de_page">
                     <!-- Logo et navigation -->
                     <div class="logo"><img src="../Images/Totokos.Temptations.Logo.Website.png" width="50px" alt="Logo">Totoko's Temptations</div>
+                    <div class="hamburger">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                     <nav aria-label="Navigation haut de page">
                         <ul>
                             <li><a href="./Accueil_Boulangerie.html">Accueil</a></li>
@@ -42,8 +48,8 @@
             <!-- Contenu principal de la page -->
             <main>
                 <!-- Section de bienvenue -->
-                <div class="bienvenue">
-                    <div>
+                <div class="background-container">
+                    <div class="bienvenue">
                         <h2>Explorez notre palette de saveurs dans notre</h2>
                         <h1>Boulangerie artisanale</h1>
                     </div>
@@ -52,57 +58,41 @@
                 <!-- Section des produits d'accueil -->
                 <div class="produit_accueil">
                     <h2>Nos produits les plus achetés</h2>
-                    <div>
-                        <!-- Premier produit -->
-                        <img src="../Images/Images_selection/Chocofolie.jpg" height="300px" alt="Chocofolie">
-                        <div>
+                    <!-- Premier produit -->
+                    <div class="produit">
+                        <div class="responsive-image">
+                            <img src="../Images/Images_selection/Chocofolie.jpg" alt="Chocofolie" style="max-width:300px; max-height:300px;">
+                        </div>
+                        <div class="responsive-text">
                             <h4>Chocofolie</h4>
-                            <p>
-                                Plongez dans l'univers de la Chocofolie avec notre gâteau éponyme. Chaque tranche est un voyage gustatif exaltant,
-                                 où le chocolat règne en maître absolu.
-                                 Ce gâteau irrésistible est une symphonie de textures et de saveurs, avec des couches de génoise chocolatée, une
-                                  ganache onctueuse et des éclats de chocolat
-                                  croquant pour une expérience sensorielle inégalée. Laissez-vous envoûter par cette folie chocolatée, parfaite
-                                   pour satisfaire vos désirs sucrés les plus fous.</p>
+                            <p>Plongez dans l'univers de la Chocofolie avec notre gâteau éponyme. Chaque tranche est un voyage gustatif exaltant, où le chocolat règne en maître absolu. Ce gâteau irrésistible est une symphonie de textures et de saveurs, avec des couches de génoise chocolatée, une ganache onctueuse et des éclats de chocolat croquant pour une expérience sensorielle inégalée. Laissez-vous envoûter par cette folie chocolatée, parfaite pour satisfaire vos désirs sucrés les plus fous.</p>
                         </div>
                     </div>
-                    <br>
                     <!-- Deuxième produit -->
-                    <div>
-                        <img src="../Images/Images_selection/Jack blanc.jpg" width="300px" alt="Jack blanc">
-                        <div>
+                    <div class="produit">
+                        <div class="responsive-image">
+                            <img src="../Images/Images_selection/Jack blanc.jpg" alt="Jack blanc" style="max-width:300px; max-height:300px;">
+                        </div>
+                        <div class="responsive-text">
                             <h4>Jack blanc</h4>
-                            <p>
-                                Découvrez notre pain Jack Blanc, une expérience de boulangerie qui vous transportera dans un monde de
-                                 saveurs délicates et de texture exquise. Chaque tranche
-                                 révèle un équilibre parfait entre la douceur de la mie et la légère croustillance de la croûte, créant
-                                  une harmonie en bouche incomparable. Confectionné
-                                  avec soin à partir des meilleurs ingrédients, ce pain est un hommage à la tradition et au savoir-faire
-                                   artisanal.</p>
+                            <p>Découvrez notre pain Jack Blanc, une expérience de boulangerie qui vous transportera dans un monde de saveurs délicates et de texture exquise. Chaque tranche révèle un équilibre parfait entre la douceur de la mie et la légère croustillance de la croûte, créant une harmonie en bouche incomparable. Confectionné avec soin à partir des meilleurs ingrédients, ce pain est un hommage à la tradition et au savoir-faire artisanal.</p>
                         </div>
                     </div>
-                    <br>
                     <!-- Troisième produit -->
-                    <div>
-                        <img src="../Images/Images_selection/Croissant aux amandes.jpg" width="300px" alt="Croissant aux amandes">
-                        <div>
+                    <div class="produit">
+                        <div class="responsive-image">
+                            <img src="../Images/Images_selection/Croissant aux amandes.jpg" alt="Croissant aux amandes" style="max-width:300px; max-height:300px;">
+                        </div>
+                        <div class="responsive-text">
                             <h4>Croissant aux amandes</h4>
-                            <p>
-                                Dégustez notre délicieux croissant aux amandes, une collation exquise qui allie la légèreté du croissant feuilleté
-                                 à la richesse des amandes caramélisées.
-                                 Chaque bouchée est une symphonie de textures, avec des couches croustillantes de pâte feuilletée enveloppant
-                                  un cœur fondant et généreusement garni d'une
-                                  crème d'amande onctueuse. Laissez-vous séduire par l'arôme envoûtant des amandes grillées et le délice sucré
-                                   qui se fond dans votre palais à chaque instant.
-                                   Parfait pour accompagner votre pause-café ou pour une indulgence gourmande à tout moment de la journée.</p>
+                            <p>Dégustez notre délicieux croissant aux amandes, une collation exquise qui allie la légèreté du croissant feuilleté à la richesse des amandes caramélisées. Chaque bouchée est une symphonie de textures, avec des couches croustillantes de pâte feuilletée enveloppant un cœur fondant et généreusement garni d'une crème d'amande onctueuse. Laissez-vous séduire par l'arôme envoûtant des amandes grillées et le délice sucré qui se fond dans votre palais à chaque instant. Parfait pour accompagner votre pause-café ou pour une indulgence gourmande à tout moment de la journée.</p>
                         </div>
                     </div>
-                    <br>
                 </div>
 
                 <!-- Section d'informations d'introduction -->
                 <div class="intro_info">
-                    <div>
+                    <div class="intro_info2">
                         <!-- Heures d'ouverture -->
                         <h2>Nos heures d'ouverture</h2>
                         <ul>
@@ -126,13 +116,13 @@
                             combler vos envies les plus gourmandes.</p>
                     </div>
 
-                    <div>
+                    <div class="Carte">
                         <!-- Emplacement -->
                         <h2>Notre emplacement</h2>
                         <div></div>
                         <!-- Carte Google Maps -->
                         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11198.024034032962!2d-75.6268076!3d45.4394585!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0ff104b131ed%3A0x5045d05b7789c105!2zQ29sbMOoZ2UgTGEgQ2l0w6k!5e0!3m2!1sfr!2sca!4v1710124052989!5m2!1sfr!2sca" 
-                        width="600" height="450" allowfullscreen="" loading="lazy" title="Notre emplacement" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        width="300px" height="450" allowfullscreen="" loading="lazy" title="Notre emplacement" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
 

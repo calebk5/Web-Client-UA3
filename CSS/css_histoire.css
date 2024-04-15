@@ -1,3 +1,4 @@
+
 /* Importation des polices Google */
 @import url('https://fonts.googleapis.com/css2?family=Cookie:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
@@ -208,28 +209,62 @@ footer {
     padding: 10px 20px; 
 }
 
-.wrapper{
-    margin-left: 50%;
-    margin-right: 15%;
-    height: 300px;
-    position: relative;
+.wrapper {
+    display: flex;
+    flex-direction: row; /* Change pour aligner horizontalement par défaut */
+    align-items: center; /* Centre les enfants horizontalement */
+    justify-content: flex-start; /* Commence au début du conteneur */
+    width: 80%; /* ou la largeur désirée */
+    margin-left: auto;
+    margin-right: auto;
+    position: relative; /* Important pour tout positionnement absolu */
+    height: auto;
 }
-.wrapper p{
-    padding: 2% ;
-    font-size: 16px;
-    background-color: rgba(241, 230, 195, 0.633);
-    color: rgb(26, 17, 0);
-    border-radius: 5%;
 
+.wrapper img {
+    width: 50%; /* Taille de l'image */
+    height: auto; /* Conserve le ratio de l'image */
+    max-width: 300px; /* Largeur maximale de l'image */
+    max-height: 300px; /* Hauteur maximale de l'image */
+    margin-right: 20px; /* Espace entre l'image et le texte */
+    z-index: 1;
 }
-.wrapper img{
-    position: absolute;
-    width: 80%;
-    height: 80%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-200%,-65%);
+
+.wrapper p {
+    flex-grow: 1; /* Permet au texte de prendre l'espace restant */
+    padding: 15px;
+    box-sizing: border-box;
+    z-index: 2;
+    background-color: rgba(241, 230, 195, 0.9);
+    width: 80%; /* Largeur standard pour tous les écrans */
+    margin-left: auto;
+    margin-right: auto;
 }
+
+/* Media Query pour ajuster la mise en page lorsque l'écran est sous 768px */
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column; /* Empile les éléments verticalement */
+        align-items: center; /* Centre les éléments pour un meilleur rendu visuel */
+    }
+
+    .wrapper img {
+        width: 100%; /* L'image prend toute la largeur, mais est limitée par max-width */
+        max-width: 300px; /* Limite la largeur de l'image à 300px */
+        height: auto; /* Hauteur ajustée pour maintenir le ratio de l'aspect */
+        margin-right: 0; /* Aucun espace nécessaire à droite */
+        margin-top: 20px; /* Espace au-dessus de l'image */
+        margin-bottom: 20px; /* Espace en dessous de l'image */
+    }
+
+    .wrapper p {
+        width: 100%; /* Le paragraphe prend toute la largeur disponible */
+        padding: 15px; /* Padding pour le texte pour un meilleur confort visuel */
+    }
+}
+
+
+
 
 /* Section mession */
 .mission{
@@ -243,4 +278,46 @@ font-size: 16px;
 background-color: rgba(241, 230, 195, 0.633);
 color: rgb(26, 17, 0);
 border-radius: 5%;
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Cache la liste de navigation par défaut et affiche le menu hamburger en dessous de 1040px */
+@media (max-width: 1120px) {
+    nav ul {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Style pour le menu déroulant */
+.nav-active {
+    display: block;
+    position: absolute;
+    background-color: white;
+    top: 50px;
+    right: 0;
+    width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.nav-active li {
+    text-align: center;
+    padding: 12px 16px;
+}
+
+.nav-active li:hover {
+    background-color: #f1f1f1;
 }
