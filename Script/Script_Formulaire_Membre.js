@@ -1,5 +1,5 @@
 function validerFormulaire(event) {
-    if (!validerIdentite()) {
+    if (!validerIdentite() || !validerCompetences()){
         event.preventDefault();
         return false;
     }
@@ -103,3 +103,12 @@ function validerIdentite() {
     
         return valid;
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var hamburger = document.querySelector('.hamburger');
+    var navUL = document.querySelector('nav ul');
+
+    hamburger.addEventListener('click', function() {
+        navUL.classList.toggle('nav-active');
+    });
+});

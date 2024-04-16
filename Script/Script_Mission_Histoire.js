@@ -6,6 +6,7 @@ document.querySelectorAll('img').forEach(item => {
       item.style.transform = "scale(1)";
     });
   });
+  
   document.addEventListener('DOMContentLoaded', function() {
     var hamburger = document.querySelector('.hamburger');
     var navUL = document.querySelector('nav ul');
