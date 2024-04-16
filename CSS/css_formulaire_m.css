@@ -204,10 +204,7 @@ main .content {
 
 .content {
     justify-content: center;
-    padding-left: 4em;
-    padding-right: 4em;
     text-align: center;
-    margin: 5%;
     box-shadow: 8px 8px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -222,7 +219,7 @@ h1 {
     color: rgb(233, 228, 214);
     background-color: rgba(44, 26, 4, 0.71);
     width: 100%;
-}
+}*/
 
 .formulaire {
     margin-top: 3%;
