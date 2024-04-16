@@ -406,32 +406,13 @@ footer {
 /* Réduire légèrement pour les écrans moyens */
 /* Augmentation initiale pour les écrans jusqu'à 1200px */
 /* Pour des écrans jusqu'à 1200px de large */
-@media (max-width: 1200px) {
-    html, body {
-        min-height: 110vh;  /* Augmente de 10% */
+@media (max-width: 1400px) {
+    footer ul li, .bas_de_page nav ul li {
+        display: block;
+        width: 100%;
     }
 }
 
-/* Pour des écrans jusqu'à 1000px de large */
-@media (max-width: 1000px) {
-    html, body {
-        min-height: 120vh;  /* Augmente de 20% */
-    }
-}
-
-/* Pour des écrans jusqu'à 800px de large */
-@media (max-width: 800px) {
-    html, body {
-        min-height: 130vh;  /* Augmente de 30% */
-    }
-}
-
-/* Pour des écrans jusqu'à 600px de large */
-@media (max-width: 600px) {
-    html, body {
-        min-height: 140vh;  /* Augmente de 40% */
-    }
-}
 
 @media (max-width: 1400px) {
     footer ul li, .bas_de_page ul li {
