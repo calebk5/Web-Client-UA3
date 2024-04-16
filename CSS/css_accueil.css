@@ -112,13 +112,6 @@ nav,
 }
 
 
-.background-container {
-    width: 1020px; /* Limite la largeur maximale du conteneur */
-    margin: 0 auto; /* Centre le conteneur horizontalement */
-    width: 100%; /* Assure que le conteneur prend la largeur disponible jusqu'à 1020px */
-    overflow: hidden; /* Empêche tout débordement de contenu hors du conteneur */
-}
-
 .bienvenue {
     font-family: Cookie;
     text-align: center;
@@ -151,19 +144,13 @@ div.bienvenue div {
     min-height: 100vh;
 }
 
-#content-wrap {
-    padding-bottom: 50px;
-}
-
 /* Styles du pied de page */
 footer {
     background-color: rgb(26, 17, 0);
-    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     text-align: center;
-    height: 50px;
 }
 
 .bas_de_page li {
@@ -196,7 +183,7 @@ footer {
     display: inline-block;
 }
 
-
+/* Produits */
 .produit_accueil {
     display: flex;
     flex-direction: column;  /* Les produits sont empilés verticalement */
@@ -284,6 +271,8 @@ footer {
         margin: 0 5px; /* Marges encore plus réduites */
     }
 }
+
+
 /* Couleur de fond standard pour les textes et les titres */
 /* Ajustement de la marge pour les images */
 .produit_accueil img, .intro_info img {
@@ -370,6 +359,7 @@ footer {
 .hamburger {
     display: none;
     cursor: pointer;
+    padding-right: 20px;
 }
 
 .hamburger div {
@@ -378,11 +368,12 @@ footer {
     background-color: black;
     margin: 6px 0;
     transition: 0.4s;
+
 }
 
 /* Cache la liste de navigation par défaut et affiche le menu hamburger en dessous de 1040px */
 @media (max-width: 1120px) {
-    nav ul {
+    header nav ul {
         display: none;
     }
     .hamburger {
@@ -393,6 +384,7 @@ footer {
 /* Style pour le menu déroulant */
 .nav-active {
     display: block;
+    text-align: center;
     position: absolute;
     background-color: white;
     top: 50px;
@@ -403,12 +395,13 @@ footer {
 
 .nav-active li {
     text-align: center;
-    padding: 12px 16px;
+    padding: 12px;
 }
 
 .nav-active li:hover {
     background-color: #f1f1f1;
 }
+
 /* Style pour le pied de page sous une certaine largeur */
 /* Réduire légèrement pour les écrans moyens */
 /* Augmentation initiale pour les écrans jusqu'à 1200px */
@@ -421,14 +414,11 @@ footer {
 }
 
 
-
-
-/* Style initial pour le sous-menu */
-
-
-
-
-
-
-
-
+@media (max-width: 1400px) {
+    footer ul li, .bas_de_page ul li {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 15px;
+    }
+}
