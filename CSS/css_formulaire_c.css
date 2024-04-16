@@ -300,3 +300,21 @@ fieldset {
 .nav-active li:hover {
     background-color: #f1f1f1;
 }
+
+/* Media Queries to adjust the form padding on smaller screens */
+@media (max-width: 768px) {
+    .formulaire {
+        padding: 10px; /* Reduced padding for tablet and smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .formulaire {
+        padding: 5px; /* Even smaller padding for mobile screens */
+    }
+}
+
+/* Prevent horizontal scrolling */
+body {
+    overflow-x: hidden; /* Prevents horizontal scroll */
+}

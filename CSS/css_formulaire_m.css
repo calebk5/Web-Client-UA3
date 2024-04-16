@@ -2,6 +2,7 @@
     .main{
         width: 90%
     }
+    
 }
 /* Import de la police Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Cookie:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
@@ -19,15 +20,12 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
-    max-width: 100%; /* Empêche le débordement */
-    overflow-x: hidden; /* Cache le défilement horizontal */
-    padding: 0; /* Supprime les paddings par défaut */
 }
 
 /* Styles pour l'en-tête */
 header {
     background-color: rgb(255, 255, 255);
-    outline: 1px solid rgb(43, 23, 0);
+    outline: 1px solid rgb(43, 23, 0); /* Outline is now combined */
 }
 
 /* Styles pour la partie supérieure de la page */
@@ -45,7 +43,7 @@ header {
     font-size: 14px;
     font-weight: 400;
     position: relative;
-    text-align: right;
+    text-align: right; /* Moved from haut_de_page nav to haut_de_page li */
 }
 
 .haut_de_page nav {
@@ -122,9 +120,6 @@ nav,
     padding-bottom: 50px;
 }
 
-
-
-
 /* Styles pour le pied de page */
 footer {
     background-color: rgb(26, 17, 0);
@@ -166,7 +161,7 @@ footer {
     display: inline-block;
 }
 
-/* Styles du formulaire */
+/* Styles supplémentaires */
 label.subtitle {
     font-style: italic;
     font-size: 20px;
@@ -193,6 +188,7 @@ main {
     max-width: 1200px;
     height: 100%;
     width: 100%;
+    animation: fadeIn 2s;
 }
 
 main .content {
@@ -202,7 +198,6 @@ main .content {
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(213, 205, 185);
-    animation: fadeIn 2s;
 }
 
 .content {
@@ -239,6 +234,7 @@ h1 {
     margin: auto; /* Centre le formulaire horizontalement */
 
 }
+
 .formulaire button,
 .formulaire legend {
     margin-top: 10px;
@@ -251,30 +247,19 @@ h1 {
     width: 100%; /* Garde la largeur originale des éléments de formulaire */
     max-width: 300px; /* Ou une autre largeur spécifique si nécessaire */
 }
-
-
 .bouton{
     cursor: pointer;
 }
 
-
-fieldset {
-    margin: 10px;
-    border-color: rgba(44, 26, 4, 0.71);
-}
 .formulaire label {
     font-size: 20px;
     border-bottom: 2px dotted rgba(44, 26, 4, 0.71);
 }
 
-
-legend {
-    padding: 0 10px;
-    font-size: 18px;
+fieldset {
+    margin: 10px;
+    border-color: rgba(44, 26, 4, 0.71);
 }
-
-
-/* Ajustements pour les tablettes */
 
 .invalid-field {
     border: 2px solid red !important;
@@ -292,6 +277,10 @@ legend {
     margin: 6px 0;
     transition: 0.4s;
 }
+
+/* Cache la liste de navigation par défaut et affiche le menu hamburger en dessous de 1040px */
+
+
 /* Style pour le menu déroulant */
 .nav-active {
     display: block;
@@ -310,4 +299,22 @@ legend {
 
 .nav-active li:hover {
     background-color: #f1f1f1;
+}
+
+/* Media Queries to adjust the form padding on smaller screens */
+@media (max-width: 768px) {
+    .formulaire {
+        padding: 10px; /* Reduced padding for tablet and smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .formulaire {
+        padding: 5px; /* Even smaller padding for mobile screens */
+    }
+}
+
+/* Prevent horizontal scrolling */
+body {
+    overflow-x: hidden; /* Prevents horizontal scroll */
 }
