@@ -279,9 +279,12 @@ background-color: rgba(241, 230, 195, 0.633);
 color: rgb(26, 17, 0);
 border-radius: 5%;
 }
+
+/* Style pour le bouton hamburger */
 .hamburger {
     display: none;
     cursor: pointer;
+    z-index: 1;
 }
 
 .hamburger div {
@@ -311,6 +314,7 @@ border-radius: 5%;
     right: 0;
     width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
 .nav-active li {

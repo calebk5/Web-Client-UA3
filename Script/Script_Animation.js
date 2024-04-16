@@ -12,7 +12,6 @@ function cakechange() {
      }, 3000);
 }
 
-
 function muffinchange() {
     var element = document.getElementById('pastry');
     element.classList.remove("cake");
@@ -27,10 +26,16 @@ function muffinchange() {
     }, 3000);
 }
 
-
-
-
 document.getElementById("buttoncake").addEventListener("click", function(){
     var animationTarget = document.querySelector("pastry");
     animationTarget.classList.add("ovendough");
   });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var hamburger = document.querySelector('.hamburger');
+    var navUL = document.querySelector('nav ul');
+
+    hamburger.addEventListener('click', function() {
+        navUL.classList.toggle('nav-active');
+    });
+});
