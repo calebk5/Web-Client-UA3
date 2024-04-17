@@ -19,7 +19,8 @@ html, body {
 /* Styles de l'en-tête */
 header {
     background-color: rgb(255, 255, 255);
-    outline: 1px solid rgb(43, 23, 0); /* Ajout d'une bordure solide */
+    outline: 1px solid rgb(43, 23, 0);
+    box-shadow: 0px 8px 10px 10px rgba(255, 255, 255, 0.3);
 }
 
 /* Navigation en haut de la page */
@@ -83,14 +84,14 @@ nav,
 
 /* Styles du sous-menu */
 .sous-menu {
-    display: none; /* Cacher le sous-menu par défaut */
-    position: absolute; /* Position par rapport au parent */
-    top: 15px; /* Ajuster si nécessaire */
+    display: none;
+    position: absolute;
+    top: 15px;
     background-color: rgb(249, 243, 236);
     border-radius: 5%;
     padding-top: 5px;
     text-align: left;
-    z-index: 50; /* Éviter les chevauchements */
+    z-index: 50;
 }
 
 .haut_de_page li:hover .sous-menu {
@@ -146,7 +147,6 @@ footer {
     display: inline-block;
 }
 
-
 /* Contenu de la page  */
 
 /* Haut de la page avec titre et background image */
@@ -162,7 +162,7 @@ footer {
     color: rgb(26, 17, 0);
     background-color: rgba(241, 230, 195, 0.797);
     border-radius: 5%;
-    padding: 5px;
+    padding: 10px 20px;
     position: absolute;
     top: 30%; 
     left: 50%; 
@@ -184,13 +184,14 @@ footer {
 }
 
 /* Textes et images de l'histoire */
-
 .histoire div {
     display: flex; 
     justify-content: center; 
     align-items: center; 
     height: 100px; 
     margin: 0; 
+    padding-top: 30px;
+    border-top:rgba(26, 17, 0, 0.664) dotted;
 }
 
 .histoire h2{
@@ -206,62 +207,65 @@ footer {
 
 .wrapper {
     display: flex;
-    flex-direction: row; /* Change pour aligner horizontalement par défaut */
-    align-items: center; /* Centre les enfants horizontalement */
-    justify-content: flex-start; /* Commence au début du conteneur */
-    width: 80%; /* ou la largeur désirée */
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
-    position: relative; /* Important pour tout positionnement absolu */
+    position: relative;
     height: auto;
 }
 
 .wrapper img {
-    width: 50%; /* Taille de l'image */
-    height: auto; /* Conserve le ratio de l'image */
-    max-width: 300px; /* Largeur maximale de l'image */
-    max-height: 300px; /* Hauteur maximale de l'image */
-    margin-right: 20px; /* Espace entre l'image et le texte */
+    width: 50%;
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
+    margin-right: 20px;
     z-index: 1;
+    margin-bottom: 30px;
+    border: 3px solid;
+    border-radius: 3%;
+    border-color: rgb(39, 26, 2);
 }
 
 .wrapper p {
-    flex-grow: 1; /* Permet au texte de prendre l'espace restant */
+    flex-grow: 1;
     padding: 15px;
     box-sizing: border-box;
     z-index: 2;
-    background-color: rgba(241, 230, 195, 0.9);
-    width: 80%; /* Largeur standard pour tous les écrans */
+    background-color: rgba(241, 230, 195, 0.74);
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
+    border: 3px solid;
+    border-color: rgb(39, 26, 2);
 }
 
 /* Media Query pour ajuster la mise en page lorsque l'écran est sous 768px */
 @media (max-width: 768px) {
     .wrapper {
-        flex-direction: column; /* Empile les éléments verticalement */
-        align-items: center; /* Centre les éléments pour un meilleur rendu visuel */
+        flex-direction: column;
+        align-items: center;
     }
-
+    
     .wrapper img {
-        width: 100%; /* L'image prend toute la largeur, mais est limitée par max-width */
-        max-width: 300px; /* Limite la largeur de l'image à 300px */
-        height: auto; /* Hauteur ajustée pour maintenir le ratio de l'aspect */
-        margin-right: 0; /* Aucun espace nécessaire à droite */
-        margin-top: 20px; /* Espace au-dessus de l'image */
-        margin-bottom: 20px; /* Espace en dessous de l'image */
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        margin-right: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
-
+    
     .wrapper p {
-        width: 100%; /* Le paragraphe prend toute la largeur disponible */
-        padding: 15px; /* Padding pour le texte pour un meilleur confort visuel */
+        width: 100%;
+        padding: 15px;
     }
 }
 
-
-
-
-/* Section mession */
+/* Section mission */
 .mission{
     padding-left: 25%;
     padding-right: 25%;
@@ -306,10 +310,11 @@ border-radius: 5%;
     display: block;
     text-align: center;
     position: absolute;
-    background-color: white;
+    background-color: rgb(249, 243, 236);
+    padding-top: 5px;
     top: 50px;
     right: 0;
-    width: 200px;
+    width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }

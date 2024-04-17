@@ -1,45 +1,47 @@
 <!DOCTYPE html>
-<html lang="fr"> <!-- Langue définie comme français -->
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Totoko's Temptations</title> <!-- Titre de la page -->
-    <link rel="stylesheet" href="../CSS/css_accueil.css"> <!-- Liaison vers la feuille de style CSS -->
-    <script src="../Script/Script_Accueil.js"></script>
-
+    <title>Totoko's Temptations</title>
+    <link rel="stylesheet" href="./CSS/css_accueil.css">
+    <script src="./Script/Script_Accueil.js"></script>
 </head>
 
 <body>
-    <!-- Conteneur de la page pour la mise en page -->
+    <!-- Conteneur principal de la page -->
     <div id="page-container">
         <div id="content-wrap">
             <!-- En-tête de la page -->
             <header>
                 <div class="haut_de_page">
                     <!-- Logo et navigation -->
-                    <div class="logo"><img src="../Images/Totokos.Temptations.Logo.Website.png" width="50px" alt="Logo">Totoko's Temptations</div>
+                    <div class="logo"><img src="./Images/Totokos.Temptations.Logo.Website.png" width="50px" alt="Logo">Totoko's Temptations</div>
+                    <!-- Menu hamburger -->
                     <div class="hamburger">
                         <div></div>
                         <div></div>
                         <div></div>
                     </div>
+                    <!-- Navigation -->
                     <nav aria-label="Navigation haut de page">
                         <ul>
+                            <!-- Liens de navigation -->
                             <li><a href="./Accueil_Boulangerie.html">Accueil</a></li>
-                            <li><a href="./Selection_Produit.html">Sélection de produits</a>
+                            <li><a href="./Pages HTML/Selection_Produit.html">Sélection de produits</a>
                                 <!-- Sous-menu de sélection de produits -->
                                 <ul class="sous-menu">
-                                    <li><a href="./Selection_Produit.html#viennoiseries">Viennoiserie</a></li>
-                                    <li><a href="./Selection_Produit.html#pains">Pains délicieux</a></li>
-                                    <li><a href="./Selection_Produit.html#gateaux">Gâteaux</a></li>
+                                    <li><a href="./Pages HTML/Selection_Produit.html#viennoiseries">Viennoiserie</a></li>
+                                    <li><a href="./Pages HTML/Selection_Produit.html#pains">Pains délicieux</a></li>
+                                    <li><a href="./Pages HTML/Selection_Produit.html#gateaux">Gâteaux</a></li>
                                 </ul>
                             </li>
-                            <li><a href="./Formulaire_Membre.html">Inscription</a></li>
-                            <li><a href="./Mission_Histoire.html">Notre mission &amp; histoire</a></li>
-                            <li><a href="./Notre_Equipe.html">Notre équipe</a></li>
-                            <li><a href="./Animation.html">Jouez au jeu!</a></li>
-                            <li><a href="./Formulaire_Communication.html">Contactez-nous</a></li>
+                            <li><a href="./Pages HTML/Formulaire_Membre.html">Inscription</a></li>
+                            <li><a href="./Pages HTML/Mission_Histoire.html">Notre mission &amp; histoire</a></li>
+                            <li><a href="./Pages HTML/Notre_Equipe.html">Notre équipe</a></li>
+                            <li><a href="./Pages HTML/Animation.html">Jouez au jeu!</a></li>
+                            <li><a href="./Pages HTML/Formulaire_Communication.html">Contactez-nous</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -48,8 +50,8 @@
             <!-- Contenu principal de la page -->
             <main>
                 <!-- Section de bienvenue -->
-                <div class="background-container">
-                    <div class="bienvenue">
+                <div class="bienvenue">
+                    <div>
                         <h2>Explorez notre palette de saveurs dans notre</h2>
                         <h1>Boulangerie artisanale</h1>
                     </div>
@@ -58,30 +60,27 @@
                 <!-- Section des produits d'accueil -->
                 <div class="produit_accueil">
                     <h2>Nos produits les plus achetés</h2>
-                    <!-- Premier produit -->
                     <div class="produit">
                         <div class="responsive-image">
-                            <img src="../Images/Images_selection/Chocofolie.jpg" alt="Chocofolie" style="max-width:300px; max-height:300px;">
+                            <img src="./Images/Images_selection/Chocofolie.jpg" alt="Chocofolie">
                         </div>
                         <div class="responsive-text">
                             <h4>Chocofolie</h4>
                             <p>Plongez dans l'univers de la Chocofolie avec notre gâteau éponyme. Chaque tranche est un voyage gustatif exaltant, où le chocolat règne en maître absolu. Ce gâteau irrésistible est une symphonie de textures et de saveurs, avec des couches de génoise chocolatée, une ganache onctueuse et des éclats de chocolat croquant pour une expérience sensorielle inégalée. Laissez-vous envoûter par cette folie chocolatée, parfaite pour satisfaire vos désirs sucrés les plus fous.</p>
                         </div>
                     </div>
-                    <!-- Deuxième produit -->
                     <div class="produit">
                         <div class="responsive-image">
-                            <img src="../Images/Images_selection/Jack blanc.jpg" alt="Jack blanc" style="max-width:300px; max-height:300px;">
+                            <img src="./Images/Images_selection/Jack blanc.jpg" alt="Jack blanc">
                         </div>
                         <div class="responsive-text">
                             <h4>Jack blanc</h4>
                             <p>Découvrez notre pain Jack Blanc, une expérience de boulangerie qui vous transportera dans un monde de saveurs délicates et de texture exquise. Chaque tranche révèle un équilibre parfait entre la douceur de la mie et la légère croustillance de la croûte, créant une harmonie en bouche incomparable. Confectionné avec soin à partir des meilleurs ingrédients, ce pain est un hommage à la tradition et au savoir-faire artisanal.</p>
                         </div>
                     </div>
-                    <!-- Troisième produit -->
                     <div class="produit">
                         <div class="responsive-image">
-                            <img src="../Images/Images_selection/Croissant aux amandes.jpg" alt="Croissant aux amandes" style="max-width:300px; max-height:300px;">
+                            <img src="./Images/Images_selection/Croissant aux amandes.jpg" alt="Croissant aux amandes">
                         </div>
                         <div class="responsive-text">
                             <h4>Croissant aux amandes</h4>
@@ -125,7 +124,6 @@
                         width="300px" height="450" allowfullscreen="" loading="lazy" title="Notre emplacement" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-
             </main>
         </div>
 
@@ -135,15 +133,15 @@
                 <nav aria-label="Navigation bas de page">
                     <ul>
                         <!-- Liens de navigation du pied de page -->
-                        <li><a href="https://github.com/calebk5/Web-Client">Visitez notre répertoire GitHub en cliquant ici</a></li>
+                        <li><a href="https://github.com/calebk5/Web-Client-UA3">Visitez notre répertoire GitHub en cliquant ici</a></li>
                         <li>Téléphonez-nous au : <a href="tel:819-123-1234">819&#8209;123&#8209;1234</a></li>
                         <li><a href="./Accueil_Boulangerie.html">Accueil</a></li>
-                        <li><a href="./Selection_Produit.html">Sélection de produits</a></li>
-                        <li><a href="./Formulaire_Membre.html">Inscription</a></li>
-                        <li><a href="./Mission_Histoire.html">Notre mission &amp; histoire</a></li>
-                        <li><a href="./Notre_Equipe.html">Notre équipe</a></li>
-                        <li><a href="./Formulaire_Communication.html">Contactez-nous</a></li>
-                        <li><a href="./Animation.html">Jouez au jeu!</a></li>
+                        <li><a href="./Pages HTML/Selection_Produit.html">Sélection de produits</a></li>
+                        <li><a href="./Pages HTML/Formulaire_Membre.html">Inscription</a></li>
+                        <li><a href="./Pages HTML/Mission_Histoire.html">Notre mission &amp; histoire</a></li>
+                        <li><a href="./Pages HTML/Notre_Equipe.html">Notre équipe</a></li>
+                        <li><a href="./Pages HTML/Formulaire_Communication.html">Contactez-nous</a></li>
+                        <li><a href="./Pages HTML/Animation.html">Jouez au jeu!</a></li>
                         <li>Date de création : 9 mars 2024</li>
                         <li>©Totoko &amp; Family</li>
                     </ul>

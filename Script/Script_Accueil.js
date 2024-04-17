@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Effet de survol pour les images des produits les plus achetés (Code inchangé)
+    // Effet de survol pour les images des produits les plus achetés
     document.querySelectorAll('.produit_accueil img').forEach(function(img) {
         img.addEventListener('mouseover', function() {
             img.style.transform = 'translateX(-10px) scale(1.1)';
@@ -13,10 +13,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     window.onload = function() {
-        alert("Bienvenue sur le site de Totoko's Temptations! Découvrez nos offres spéciales.");
-      };
+        setTimeout(function() {
+            alert("Bienvenue sur le site de Totoko's Temptations! Découvrez nos offres spéciales.");
+        }, 2000);
+    };
 });
 
+// Script pour le menu hamburger
 document.addEventListener('DOMContentLoaded', function() {
     var hamburger = document.querySelector('.hamburger');
     var navUL = document.querySelector('nav ul');

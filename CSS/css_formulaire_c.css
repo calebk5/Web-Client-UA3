@@ -7,24 +7,25 @@
 }
 
 html {
-    height: 100%; /* Garder le 100% sur html pour que le body ait une référence complète */
+    height: 100%;
 }
 /* Réinitialisation des styles par défaut */
 html, body {
     font-size: 14px;
     font-family: sans-serif;
-    min-height: 100vh;  /* Hauteur minimale de 100% de la fenêtre de visualisation */
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow-x: hidden;  /* Empêche le défilement horizontal */
-    overflow-y: auto;  /* Active le défilement vertical si nécessaire */
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* Styles pour l'en-tête */
 header {
     background-color: rgb(255, 255, 255);
-    outline: 1px solid rgb(43, 23, 0); /* Outline is now combined */
+    outline: 1px solid rgb(43, 23, 0);
+    box-shadow: 0px 8px 10px 10px rgba(255, 255, 255, 0.3);
 }
 
 /* Navigation en haut de la page */
@@ -88,14 +89,14 @@ nav,
 
 /* Styles du sous-menu */
 .sous-menu {
-    display: none; /* Cacher le sous-menu par défaut */
-    position: absolute; /* Position par rapport au parent */
-    top: 15px; /* Ajuster si nécessaire */
+    display: none;
+    position: absolute;
+    top: 15px;
     background-color: rgb(249, 243, 236);
     border-radius: 5%;
     padding-top: 5px;
     text-align: left;
-    z-index: 50; /* Éviter les chevauchements */
+    z-index: 50;
 }
 
 .haut_de_page li:hover .sous-menu {
@@ -110,6 +111,10 @@ nav,
 #page-container {
     position: relative;
     min-height: 100vh;
+}
+
+div#content-wrap {
+    background-image: url(https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?cs=srgb&dl=pexels-pixabay-326311.jpg&fm=jpg);
 }
 
 /* Styles du pied de page */
@@ -151,8 +156,7 @@ footer {
     display: inline-block;
 }
 
-
-/* Styles supplémentaires */
+/* Styles du formulaire */
 label.subtitle {
     font-style: italic;
     font-size: 20px;
@@ -175,11 +179,12 @@ input[type=text] {
 
 main {
     position: relative;
-    top: 0px;
     max-width: 1200px;
     height: 100%;
     width: 100%;
     animation: fadeIn 2s;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 main .content {
@@ -188,13 +193,14 @@ main .content {
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgb(213, 205, 185);
+    background-color: rgba(213, 205, 185, 0.877);
 }
 
 .content {
     justify-content: center;
     text-align: center;
-    box-shadow: 8px 8px 4px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 8px 8px 4px 4px rgba(213, 205, 185, 0.493);;
+    border-radius: 1%;
 }
 
 main {
@@ -213,14 +219,13 @@ h1 {
 .formulaire {
     margin-top: 3%;
     background-color: rgb(213, 205, 185);
-    display: flex; /* Active Flexbox */
-    flex-direction: column; /* Organise les enfants verticalement */
-    align-items: center; /* Centre les éléments horizontalement dans le conteneur */
-    justify-content: flex-start; /* Alignement vertical au début du conteneur */
-    width: 80%; /* Taille par défaut adaptée aux grands écrans */
-    max-width: 600px; /* Limite la taille maximale du formulaire */
-    margin: auto; /* Centre le formulaire horizontalement */
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
 }
 
 .formulaire button,
@@ -232,8 +237,8 @@ h1 {
     background-color: rgba(44, 26, 4, 0.71);
     border-radius: 5%;
     display: inline;
-    width: 100%; /* Garde la largeur originale des éléments de formulaire */
-    max-width: 300px; /* Ou une autre largeur spécifique si nécessaire */
+    width: 100%;
+    max-width: 300px;
 }
 .bouton{
     cursor: pointer;
@@ -249,6 +254,7 @@ fieldset {
     border-color: rgba(44, 26, 4, 0.71);
 }
 
+/* Style pour champ invalide lors de la verification */
 .invalid-field {
     border: 2px solid red !important;
     background-color: #fce1e5 !important;
@@ -285,10 +291,11 @@ fieldset {
     display: block;
     text-align: center;
     position: absolute;
-    background-color: white;
+    background-color: rgb(249, 243, 236);
+    padding-top: 5px;
     top: 50px;
     right: 0;
-    width: 200px;
+    width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
