@@ -1,4 +1,5 @@
-function validerIdentite() {
+// Script pour la validation de l'information
+function validerInformation() {
     let prenom = document.getElementById('prenom');
     let nom = document.getElementById('nom');
     let telephone = document.getElementById('numero_de_telephone');
@@ -7,7 +8,6 @@ function validerIdentite() {
     let mineur = document.querySelector('input[name="mineur"]:checked');
     let valid = true;
 
-    // Validation of first name
     if (prenom.value.trim() === '') {
         prenom.classList.add('invalid-field');
         alert('Veuillez entrer votre prénom.');
@@ -16,7 +16,6 @@ function validerIdentite() {
         prenom.classList.remove('invalid-field');
     }
 
-    // Validation of last name
     if (nom.value.trim() === '') {
         nom.classList.add('invalid-field');
         alert('Veuillez entrer votre nom.');
@@ -25,7 +24,6 @@ function validerIdentite() {
         nom.classList.remove('invalid-field');
     }
 
-    // Validation of phone number
     let regexTelephone = /^(\([0-9]{3}\)\s*|[0-9]{3}\-)[0-9]{3}-[0-9]{4}$/;
     if (!regexTelephone.test(telephone.value)) {
         telephone.classList.add('invalid-field');
@@ -35,7 +33,6 @@ function validerIdentite() {
         telephone.classList.remove('invalid-field');
     }
 
-    // Validation of email
     let regexCourriel = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (!regexCourriel.test(courriel.value)) {
         courriel.classList.add('invalid-field');
@@ -45,13 +42,11 @@ function validerIdentite() {
         courriel.classList.remove('invalid-field');
     }
 
-    // Validation for age
     if (!mineur) {
         alert('Veuillez sélectionner si vous avez plus de 18 ans.');
         valid = false;
     }
 
-    // Validation of message
     if (message.value.trim() === '') {
         message.classList.add('invalid-field');
         alert('Veuillez entrer votre message.');
@@ -63,8 +58,9 @@ function validerIdentite() {
     return valid;
 }
 
+// Script pour la vérification de la validation et un message lorsque le formulaire est soumis
 function validerFormulaire(event) {
-    if (!validerIdentite()) {
+    if (!validerInformation()) {
         event.preventDefault();
         return false;
     }
@@ -76,6 +72,7 @@ function validerFormulaire(event) {
     return true;
 }
 
+// Script pour le menu hamburger
 document.addEventListener('DOMContentLoaded', function() {
     var hamburger = document.querySelector('.hamburger');
     var navUL = document.querySelector('nav ul');

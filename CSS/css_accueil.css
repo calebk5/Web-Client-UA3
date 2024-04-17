@@ -1,4 +1,3 @@
-
 /* Importation des polices Google */
 @import url('https://fonts.googleapis.com/css2?family=Cookie:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
@@ -7,29 +6,24 @@
     to { opacity: 1; }
 }
 
-.bienvenue {
-    animation: fadeIn 2s;
-}
-
 /* Réinitialisation des styles par défaut */
 html, body {
     font-size: 14px;
     font-family: sans-serif;
-    min-height: 100vh;  /* Hauteur minimale de 100% de la fenêtre de visualisation */
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    overflow-x: hidden;  /* Empêche le défilement horizontal */
-    overflow-y: auto;  /* Active le défilement vertical si nécessaire */
+    overflow-x: hidden;
+    overflow-y: auto;
 }
-
-
 
 /* Styles de l'en-tête */
 header {
     background-color: rgb(255, 255, 255);
-    outline: 1px solid rgb(43, 23, 0); /* Ajout d'une bordure solide */
+    outline: 1px solid rgb(43, 23, 0);
+    box-shadow: 0px 8px 10px 10px rgba(255, 255, 255, 0.3);
 }
 
 /* Navigation en haut de la page */
@@ -93,14 +87,14 @@ nav,
 
 /* Styles du sous-menu */
 .sous-menu {
-    display: none; /* Cacher le sous-menu par défaut */
-    position: absolute; /* Position par rapport au parent */
-    top: 15px; /* Ajuster si nécessaire */
+    display: none;
+    position: absolute;
+    top: 15px;
     background-color: rgb(249, 243, 236);
     border-radius: 5%;
     padding-top: 5px;
     text-align: left;
-    z-index: 50; /* Éviter les chevauchements */
+    z-index: 50;
 }
 
 .haut_de_page li:hover .sous-menu {
@@ -111,7 +105,7 @@ nav,
     margin: 7px;
 }
 
-
+/* Section bienvenue */
 .bienvenue {
     font-family: Cookie;
     text-align: center;
@@ -124,16 +118,23 @@ nav,
     background-image: url(https://img.freepik.com/free-photo/flat-lay-types-bread-black-copy-space-background_23-2148432256.jpg?w=1800&t=st=1710112744~exp=1710113344~hmac=73c7ae37e7501f824b0de4e71ec7ea2963c8378a750e19d41cca1a723ad7a613);
 }
 
-h1.bienvenue:hover {
+.bienvenue h1 {
+    transition: transform 0.5s ease;
+}
+
+.bienvenue h1:hover {
     transform: scale(1.1);
 }
+
 div.bienvenue{
     width: 100%;
+    animation: fadeIn 2s;
 }
 
 div.bienvenue div {
     border: 0.125em solid;
     border-color: rgb(241, 232, 217);
+    background-color: #f1f1f12f;
     display: inline-block;
     padding: 10px;
 }
@@ -142,6 +143,132 @@ div.bienvenue div {
 #page-container {
     position: relative;
     min-height: 100vh;
+}
+
+/* Section produits */
+.produit_accueil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.produit_accueil img {
+    border: 3px solid;
+    border-radius: 3%;
+    border-color: rgb(39, 26, 2);
+}
+
+.produit_accueil > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.produit_accueil img, .intro_info img {
+    margin-bottom: 5px;
+}
+
+.produit_accueil p{
+    background-color: rgba(241, 230, 195, 0.78);
+    font-size: 20px;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5%;
+    display: inline;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.produit_accueil > h2 {
+    font-family: Cookie;
+    font-size: 40px;
+    color: rgb(26, 17, 0);
+    background-color: rgba(241, 230, 195, 0.678);
+    padding: 10px;
+    border-radius: 5%;
+    display: inline;
+}
+
+
+.produit_accueil h4 {
+    font-family: Cookie;
+    font-size: 40px;
+    color: rgb(26, 17, 0);
+    text-align: left;
+    background-color: rgb(241, 230, 195);
+    padding: 10px;
+    border-radius: 5%;
+    display: inline;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+/* Informations sur la compagnie */
+.intro_info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(https://laboulangeriedemarie.com/wp-content/uploads/2019/12/image-patisserie-tartelette_la-boulangerie-de-marie.jpg);
+    background-size: cover;
+    width: 100%;
+}
+
+.intro_info div {
+    flex: 1 1 45%;
+    align-items: center;
+    text-align: center;
+    padding-top: 3%;
+}
+
+.intro_info h2 {
+    font-family: Cookie;
+    font-size: 40px;
+    color: rgb(26, 17, 0);
+    background-color: rgba(241, 230, 195, 0.678);
+    padding: 10px;
+    border-radius: 5%;
+    display: inline;
+}
+
+.intro_info li {
+    text-align: left;
+    font-family: Cookie;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(26, 17, 0);
+    padding: 5px;
+    padding-left: 35%;
+    list-style-position: inside;
+}
+
+.intro_info ul {
+    background-color: rgba(241, 230, 195, 0.78);
+    border-radius: 5%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.intro_info iframe {
+    margin-bottom: 50px;
+}
+
+.intro_info p {
+    background-color: rgba(241, 230, 195, 0.78);
+    border-radius: 5%;
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: left;
+    font-family: Cookie;
+    font-size: 30px;
+    color: rgb(26, 17, 0);
+    padding: 5px;
+    font-weight: 700;
 }
 
 /* Styles du pied de page */
@@ -183,51 +310,18 @@ footer {
     display: inline-block;
 }
 
-/* Produits */
-.produit_accueil {
-    display: flex;
-    flex-direction: column;  /* Les produits sont empilés verticalement */
-    align-items: center; /* Centre les enfants horizontalement */
-    justify-content: flex-start; /* Commence l'alignement au début du conteneur */
-    width: 100%;
-}
-
-.produit_accueil > div {
-    display: flex;
-    flex-direction: row; /* Maintient une disposition en ligne pour les produits individuels */
-    align-items: center; /* Alignement vertical des items */
-    justify-content: space-between; /* Répartit l'espace entre les éléments uniformément */
-    width: 100%; /* Assure que chaque div enfant prend toute la largeur disponible */
-    margin-bottom: 20px; /* Ajoute un espace entre les produits */
-}
-
-.intro_info {
-    display: flex;
-    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne en dessous si nécessaire */
-    justify-content: space-between; /* Espacement entre les éléments */
-    align-items: center; /* Alignement vertical */
-    background-image: url(https://laboulangeriedemarie.com/wp-content/uploads/2019/12/image-patisserie-tartelette_la-boulangerie-de-marie.jpg);
-    background-size: cover;
-    width: 100%;
-}
-
-.intro_info div {
-    flex: 1 1 45%; /* Prend 45% de la ligne, flexible pour ajuster l'espace */
-    align-items: center;
-    text-align: center;
-    padding-top: 3%; /* Padding pour l'espacement interne */
-}
-
+/* Réactivité */
 @media (max-width: 768px) {
     .produit_accueil, .intro_info {
-        flex-direction: column; /* Empile les enfants verticalement sur les petits écrans */
+        flex-direction: column;
     }
 
     .produit_accueil > div, .intro_info div {
-        flex-basis: 100%; /* Les enfants prennent toute la largeur de leur conteneur */
-        flex-direction: column; /* Alignement vertical des éléments internes */
+        flex-basis: 100%;
+        flex-direction: column;
     }
 }
+
 .responsive-text, .responsive-image {
     display: flex;
     flex-direction: column;
@@ -239,122 +333,44 @@ footer {
     margin: 0 20px;
 }
 
+div.responsive-image img {
+    max-width:300px; 
+    max-height:300px;
+}
+
 /* Ajustements pour les médias plus petits */
 @media (max-width: 1020px) {
     .responsive-text, .responsive-image {
-        font-size: 18px; /* Taille de police adaptée pour les écrans moyens */
-        padding: 10px; /* Ajuste le padding pour les écrans de taille moyenne */
-        margin: 0 20px; /* Ajuste les marges pour les écrans de taille moyenne */
+        font-size: 18px;
+        padding: 10px;
+        margin: 0 20px;
     }
 }
 
 @media (max-width: 800px) {
     .responsive-text, .responsive-image {
-        font-size: 16px; /* Réduit la taille de la police pour les petits écrans */
-        padding: 8px; /* Ajuste le padding pour les petits écrans */
-        margin: 0 15px; /* Ajuste les marges latérales pour les petits écrans */
+        font-size: 16px;
+        padding: 8px;
+        margin: 0 15px;
     }
 }
 
 @media (max-width: 480px) {
     .responsive-text, .responsive-image {
-        font-size: 14px; /* Encore plus petit pour les très petits écrans */
-        padding: 5px; /* Padding réduit pour les très petits écrans */
-        margin: 0 10px; /* Marges latérales réduites pour les très petits écrans */
+        font-size: 14px;
+        padding: 5px;
+        margin: 0 10px;
     }
 }
 
 @media (max-width: 280px) {
     .responsive-text, .responsive-image {
-        font-size: 5px; /* Taille de police encore plus réduite */
-        padding: 5px; /* Padding encore réduit */
-        margin: 0 5px; /* Marges encore plus réduites */
+        font-size: 5px;
+        padding: 5px;
+        margin: 0 5px;
     }
 }
 
-
-/* Couleur de fond standard pour les textes et les titres */
-/* Ajustement de la marge pour les images */
-.produit_accueil img, .intro_info img {
-    margin-bottom: 5px; /* Réduit l'espace entre l'image et le texte en dessous */
-}
-
-/* Réduction du padding autour du texte pour le rapprocher de l'image */
-.produit_accueil p{
-    background-color: rgba(241, 230, 195, 0.78);
-    font-size: 20px;
-    text-align: left;
-    padding: 10px;
-    border-radius: 5%;
-    display: inline;
-    margin-top: 10px; /* Add some top margin for spacing */
-    margin-bottom: 0; /* Remove bottom margin */
-}
-
-
-/* Maintien du centrage pour les titres */
- .intro_info h2 {
-    font-family: Cookie;
-    font-size: 40px;
-    color: rgb(26, 17, 0);
-    background-color: rgba(241, 230, 195, 0.678);
-    padding: 10px;
-    border-radius: 5%;
-    display: inline;
-}
-.produit_accueil > h2 {
-    font-family: Cookie;
-    font-size: 40px;
-    color: rgb(26, 17, 0);
-    background-color: rgba(241, 230, 195, 0.678);
-    padding: 10px;
-    border-radius: 5%;
-    display: inline;
-}
-.intro_info li {
-    text-align: left;
-    font-family: Cookie;
-    font-size: 20px;
-    font-weight: 700;
-    color: rgb(26, 17, 0);
-    padding: 5px;
-    padding-left: 35%;
-    list-style-position: inside;
-}
-.intro_info ul {
-    background-color: rgba(241, 230, 195, 0.78);
-    border-radius: 5%;
-    margin-left: 20px;
-    margin-top: 20px;
-}
-.intro_info iframe {
-    margin-bottom: 50px;
-}
-.intro_info p {
-    background-color: rgba(241, 230, 195, 0.78);
-    border-radius: 5%;
-    margin-left: 20px;
-    margin-top: 20px;
-    text-align: left;
-    font-family: Cookie;
-    font-size: 30px;
-    color: rgb(26, 17, 0);
-    padding: 5px;
-    font-weight: 700;
-}
-.produit_accueil h4 {
-    font-family: Cookie;
-    font-size: 40px;
-    color: rgb(208, 155, 30);
-    text-align: left;
-    background-color: rgb(241, 230, 195);
-    padding: 10px;
-    border-radius: 5%;
-    display: inline;
-    margin-top: 10px; /* Add some top margin for spacing */
-    margin-bottom: 0; /* Remove bottom margin */
-}
-/* Style pour le bouton hamburger */
 /* Style pour le bouton hamburger */
 .hamburger {
     display: none;
@@ -386,11 +402,13 @@ footer {
     display: block;
     text-align: center;
     position: absolute;
-    background-color: white;
+    background-color: rgb(249, 243, 236);
+    padding-top: 5px;
     top: 50px;
     right: 0;
-    width: 200px;
+    width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
 .nav-active li {
@@ -403,9 +421,6 @@ footer {
 }
 
 /* Style pour le pied de page sous une certaine largeur */
-/* Réduire légèrement pour les écrans moyens */
-/* Augmentation initiale pour les écrans jusqu'à 1200px */
-/* Pour des écrans jusqu'à 1200px de large */
 @media (max-width: 1400px) {
     footer ul li, .bas_de_page nav ul li {
         display: block;
