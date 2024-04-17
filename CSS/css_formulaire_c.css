@@ -9,6 +9,7 @@
 html {
     height: 100%;
 }
+
 /* Réinitialisation des styles par défaut */
 html, body {
     font-size: 14px;
@@ -115,6 +116,8 @@ nav,
 
 div#content-wrap {
     background-image: url(https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?cs=srgb&dl=pexels-pixabay-326311.jpg&fm=jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 /* Styles du pied de page */
@@ -240,8 +243,15 @@ h1 {
     width: 100%;
     max-width: 300px;
 }
-.bouton{
+
+.formulaire button {
     cursor: pointer;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.formulaire button:hover {
+    transform: scale(1.1);
+    opacity: 0.7;
 }
 
 .formulaire label {
